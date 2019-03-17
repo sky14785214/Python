@@ -35,8 +35,9 @@ if StockNews=="1":
 elif StockNews=="2":
     print(Stockdata.high)
 elif StockNews=="3":
-    # averagedata=repr(input("請輸入幾天內的平均交易量:"))
-    print(Stockdata.moving_average(Stockdata.capacity,5))
+    averagedata=int(input("請輸入幾天內的平均交易量:"))
+    print(Stockdata.moving_average(Stockdata.capacity,averagedata))
+    # print(Stockdata.moving_average(Stockdata.capacity,5))
 elif StockNews=="4":
     print(Stockdata.ma_bias_ratio(5,20))   
 else:
