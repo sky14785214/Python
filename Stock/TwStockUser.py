@@ -25,20 +25,46 @@ import twstock
 # print(stockdata.moving_average(stockdata.capacity, 5)  ---
 # print(stockdata.ma_bias_ratio(5, 20))
 
-data=int(input("請輸入你想查詢的股票代號: "))
+data=str(input("請輸入你想查詢的股票代號: "))
 # print("你想知道的資訊: ")
 Stockdata=twstock.Stock(""+str(data))
 # Stockdata=twstock.Stock("2887")
-StockNews=input("你想知道的資訊:\n 1.回傳各日(31天)收盤價\n 2.各日之最高價\n 3.計算5日平均交易量 \n 4.計算乖離值\n" )
+StockNews=input("你想知道的資訊:\n1.回傳各日(31天)收盤價\n2.各日之最高價\n3.計算N日平均交易量\n4.計算乖離值\n5.計算KD值\n" )
 if StockNews=="1":
     print(Stockdata.price)
 elif StockNews=="2":
     print(Stockdata.high)
+    # print(Stockdata.high[30:31])
+
+    # one=Stockdata.price
+    # one1=min(one)
+    # print(one1)
+
 elif StockNews=="3":
-    averagedata=int(input("請輸入幾天內的平均交易量:"))
+    averagedata=str(input("請輸入幾天內的平均交易量:"))
     print(Stockdata.moving_average(Stockdata.capacity,averagedata))
     # print(Stockdata.moving_average(Stockdata.capacity,5))
 elif StockNews=="4":
-    print(Stockdata.ma_bias_ratio(5,20))   
+    print(Stockdata.ma_bias_ratio(5,20))
+# ---------
+elif StockNews=="5":
+    print("\n穩定成長公司、ETF\n不適合長時間盤整\n當KD<20可買進，KD>80及賣出")
+    TodayPrice=Stockdata.price[30:31]               #今日收盤
+    TodayPrice0=TodayPrice[0]
+    # print(TodayPrice0)
+
+    NineDayLowList=Stockdata.price[23:31]           #近9天內最低價
+    NineDayLowMin=min(NineDayLowList)
+    # print(NineDayLowMin)
+
+    NineDayLowList2=Stockdata.price[23:31]          #近9天最高價
+    NineDayLowMax=max(NineDayLowList2)
+    # print(NineDayLowMax)
+    
+    KD=((TodayPrice0)-(NineDayLowMin))/((NineDayLowMax)-(NineDayLowMin))*100
+    print(data,"KD值為:",KD)
+      
+# --------
+
 else:
     print("無效輸入")
