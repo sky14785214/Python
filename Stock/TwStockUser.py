@@ -46,7 +46,7 @@ elif StockNews=="3":
     # print(Stockdata.moving_average(Stockdata.capacity,5))
 elif StockNews=="4":
     print(Stockdata.ma_bias_ratio(5,20))
-# ---------
+
 elif StockNews=="5":
     print("\n穩定成長公司、ETF\n不適合長時間盤整\n當KD<20可買進，KD>80及賣出")
     TodayPrice=Stockdata.price[30:31]               #今日收盤
@@ -63,8 +63,8 @@ elif StockNews=="5":
     
     KD=((TodayPrice0)-(NineDayLowMin))/((NineDayLowMax)-(NineDayLowMin))*100
     print(data,"KD值為:",KD)
-      
-# --------
+# elif StockNews=="6":
+
 
 else:
     print("無效輸入")
