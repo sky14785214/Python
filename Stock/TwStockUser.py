@@ -29,7 +29,7 @@ data=str(input("請輸入你想查詢的股票代號: "))
 # print("你想知道的資訊: ")
 Stockdata=twstock.Stock(""+str(data))
 # Stockdata=twstock.Stock("2887")
-StockNews=input("你想知道的資訊:\n1.回傳各日(31天)收盤價\n2.各日之最高價\n3.計算N日平均交易量\n4.計算乖離值\n5.計算KD值\n" )
+StockNews=input("你想知道的資訊:\n1.回傳各日(31天)收盤價\n2.各日之最高價\n3.計算N日平均交易量\n4.計算乖離值\n5.計算KD值\n6.計算5_MACD是否高於20_MACD\n" )
 if StockNews=="1":
     print(Stockdata.price)
 elif StockNews=="2":
@@ -48,7 +48,7 @@ elif StockNews=="4":
     print(Stockdata.ma_bias_ratio(5,20))
 
 elif StockNews=="5":
-    print("\n穩定成長公司、ETF\n不適合長時間盤整\n當KD<20可買進，KD>80及賣出")
+    print("\n穩定成長公司、ETF\n不適合長時間盤整\n適合多頭趨勢的股票\n當KD<20可買進，KD>80及賣出")
     TodayPrice=Stockdata.price[30:31]               #今日收盤
     TodayPrice0=TodayPrice[0]
     # print(TodayPrice0)
@@ -63,8 +63,18 @@ elif StockNews=="5":
     
     KD=((TodayPrice0)-(NineDayLowMin))/((NineDayLowMax)-(NineDayLowMin))*100
     print(data,"KD值為:",KD)
-# elif StockNews=="6":
-
-
+elif StockNews=="6":
+    MACD0=Stockdata.price[26:31]
+    MACD11=(sum(MACD0)/len(MACD0))
+    # print(MACD11)
+    MACD1=Stockdata.price[11:31]
+    MACD31=(sum(MACD1)/len(MACD1))
+    # print(MACD31)
+    if MACD0>MACD1:
+        print("弱勢盤；做空")
+    elif MACD0==MACD1:
+        print("平盤 ; 觀望")
+    else: 
+        print("起頭盤 ; 做多")
 else:
     print("無效輸入")
