@@ -29,7 +29,8 @@ data=str(input("請輸入你想查詢的股票代號: "))
 # print("你想知道的資訊: ")
 Stockdata=twstock.Stock(""+str(data))
 # Stockdata=twstock.Stock("2887")
-StockNews=input("你想知道的資訊:\n1.回傳各日(31天)收盤價\n2.各日之最高價\n3.計算N日平均交易量\n4.計算乖離值\n5.計算KD值\n6.計算5_MACD是否高於20_MACD\n" )
+# if Stockdata in twstock.codes:
+StockNews=input("你想知道的資訊:\n1.回傳各日(31天)收盤價\n2.各日之最高價\n3.計算N日平均交易量\n4.計算乖離值\n5.計算KD值\n6.計算5_MACD是否高於20_MACD\n7.判斷是否為4大買賣點\n" )
 if StockNews=="1":
     print(Stockdata.price)
 elif StockNews=="2":
@@ -39,14 +40,12 @@ elif StockNews=="2":
     # one=Stockdata.price
     # one1=min(one)
     # print(one1)
-
 elif StockNews=="3":
     averagedata=str(input("請輸入幾天內的平均交易量:"))
     print(Stockdata.moving_average(Stockdata.capacity,averagedata))
     # print(Stockdata.moving_average(Stockdata.capacity,5))
 elif StockNews=="4":
     print(Stockdata.ma_bias_ratio(5,20))
-
 elif StockNews=="5":
     print("\n穩定成長公司、ETF\n不適合長時間盤整\n適合多頭趨勢的股票\n當KD<20可買進，KD>80及賣出")
     TodayPrice=Stockdata.price[30:31]               #今日收盤
@@ -76,5 +75,14 @@ elif StockNews=="6":
         print("平盤 ; 觀望")
     else: 
         print("起頭盤 ; 做多")
+elif StockNews=="7":
+    StockBFP=twstock.BestFourPoint(Stockdata)
+    StockBFP_to_buy=StockBFP.best_four_point_to_buy()
+    print("四大買點:量大收紅、量縮價不跌、三日均價由下往上、三日均價大於六日均價，符合: ",StockBFP_to_buy)
+    StockBFP_to_sell=StockBFP.best_four_point_to_sell()
+    print("四大賣點:量大收黑、量縮價跌、三日均價由上往下、三日均價小於六日均價，符合: ",StockBFP_to_sell)
 else:
     print("無效輸入")
+print("1234")
+# else:
+#     print("錯誤輸入")
