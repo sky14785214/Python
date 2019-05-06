@@ -14,8 +14,8 @@ img=cv2.imread("DSC_0122.jpg",0) #直接讀取為灰度圖像
 
 # 使用cv2.thresh() 套件將圖片解為非黑即白
 
-ret,thresh1 = cv2.threshold(img,150,255,cv2.THRESH_BINARY) #黑白兩值
-ret,thresh2 = cv2.threshold(img,150,255,cv2.THRESH_BINARY_INV) #黑白兩值並反轉
+ret,thresh1 = cv2.threshold(img,140,255,cv2.THRESH_BINARY) #黑白兩值
+ret,thresh2 = cv2.threshold(img,140,255,cv2.THRESH_BINARY_INV) #黑白兩值並反轉
 ret,thresh3 = cv2.threshold(img0,127,255,cv2.THRESH_TRUNC) #得圖像為多項素值
 ret,thresh4 = cv2.threshold(img0,127,255,cv2.THRESH_TOZERO) 
 ret,thresh5 = cv2.threshold(img0,127,255,cv2.THRESH_TOZERO_INV)
@@ -30,7 +30,7 @@ titles = ["Color","Gray","BINARY(兩值化)","BINARY_INV(反二值化)","TRUNC",
 #     plt.title(titles[i])
 #     plt.xticks([]),plt.yticks([])
 # plt.show()                                                
-# # print(images[3])
+# print(images[3])
 
 # -------------------
 # 獨立車牌切割出來
@@ -38,6 +38,8 @@ x = 2300
 y = 1677
 w = 910
 h = 442
+# cv2.imshow("thresh2",thresh2)
+# cv2.imwrite("test0.jpg",thresh2) #儲存opencv圖片
 complete_carpart = thresh2[y:y+h, x:x+w]
 cv2.imshow("consummation",complete_carpart)
-cv2.waitKey(0)
+cv2.waitKey(0) # 延遲 不關閉
