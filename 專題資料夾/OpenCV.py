@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt #繪圖套件
 
 #未來需改成讀取攝影資訊 並改frame讀每幀--------------
 
-img0=cv2.imread("DSC_0122.jpg",255)
+# img0=cv2.imread("DSC_0122.jpg",255)
 img=cv2.imread("DSC_0122.jpg",0) #直接讀取為灰度圖像
 
 #-------------------
@@ -16,9 +16,9 @@ img=cv2.imread("DSC_0122.jpg",0) #直接讀取為灰度圖像
 
 ret,thresh1 = cv2.threshold(img,140,255,cv2.THRESH_BINARY) #黑白兩值
 ret,thresh2 = cv2.threshold(img,140,255,cv2.THRESH_BINARY_INV) #黑白兩值並反轉
-ret,thresh3 = cv2.threshold(img0,127,255,cv2.THRESH_TRUNC) #得圖像為多項素值
-ret,thresh4 = cv2.threshold(img0,127,255,cv2.THRESH_TOZERO) 
-ret,thresh5 = cv2.threshold(img0,127,255,cv2.THRESH_TOZERO_INV)
+ret,thresh3 = cv2.threshold(img,127,255,cv2.THRESH_TRUNC) #得圖像為多項素值
+ret,thresh4 = cv2.threshold(img,127,255,cv2.THRESH_TOZERO) 
+ret,thresh5 = cv2.threshold(img,127,255,cv2.THRESH_TOZERO_INV)
 titles = ["Color","Gray","BINARY(兩值化)","BINARY_INV(反二值化)","TRUNC","TOZERO","TOZERO_INV"] #中文顯示bug 待改善
 
 
@@ -43,3 +43,8 @@ h = 442
 complete_carpart = thresh2[y:y+h, x:x+w]
 cv2.imshow("consummation",complete_carpart)
 cv2.waitKey(0) # 延遲 不關閉
+
+
+
+
+
