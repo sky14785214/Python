@@ -16,7 +16,7 @@
 # print(img.size) 
 # print(img)
 
-import cv2
+
 
 # CV_INTER_NN - 最近邻插值,  
 
@@ -25,13 +25,21 @@ import cv2
 # CV_INTER_AREA - 使用象素关系重采样。当图像缩小时候，该方法可以避免波纹出现。当图像放大时，类似于 CV_INTER_NN 方法..  
 
 # CV_INTER_CUBIC - 立方插值.  
+import cv2
 
+image=cv2.imread('C:\Users\admin\Desktop\image')
+# cv2.imshow('image',image)
+# cv2.waitKey(0)
 
-image=cv2.imread('123.jpg')
-cv2.imshow('image',image)
-cv2.waitKey(0)
+res=cv2.resize(image,(1280,1280),interpolation=cv2.INTER_CUBIC)
+# cv2.imshow('image2',res)
 
-res=cv2.resize(image,(640,640),interpolation=cv2.INTER_CUBIC)
-cv2.imshow('image2',res)
-cv2.waitKey(0)
+cv2.imwrite("C:\Users\admin\Desktop\image2",res)cv2.waitKey(0)
 cv2.destoryAllWindows()
+
+
+#-------
+# X=int(input("請輸入X值: "))
+# Y=int(input("請輸入Y值"  ))
+
+
