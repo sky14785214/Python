@@ -31,7 +31,7 @@ image=cv2.imread('123.jpg')
 cv2.imshow('image',image)
 cv2.waitKey(0)
 
-res=cv2.resize(image,(1280,1280),interpolation=cv2.INTER_CUBIC)
+res=cv2.resize(image,(640,640),interpolation=cv2.INTER_CUBIC)
 cv2.imshow('image2',res)
 cv2.waitKey(0)
 cv2.destoryAllWindows()
