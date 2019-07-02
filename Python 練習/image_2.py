@@ -53,7 +53,7 @@ import os
 
 def read_directory(directory_name):
     for filename in os.listdir(directory_name):
-        print(filename)
+        # print(filename)
         
         
 read_directory('E:\GitHub\專題資料夾\Data\image')

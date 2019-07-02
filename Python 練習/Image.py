@@ -27,9 +27,10 @@ import cv2
 # CV_INTER_CUBIC - 立方插值.  
 
 
-image=cv2.imread('e:/text0.jpg')
-res=cv2.resize(image,(32,32),interpolation=cv2.INTER_CUBIC)
-cv2.imshow('iker',res)
-cv2.imshow('image',image)
+image=cv2.imread('e:\data\image\data(1).JPG')
+res=cv2.resize(image,(800,800),interpolation=cv2.INTER_AREA)
+# cv2.imshow('iker',res)
+cv2.imwrite("datatest1.jpg",res)
+# cv2.imshow('image',image)
 cv2.waitKey(0)
-cv2.destoryAllWindows()
+# cv2.destoryAllWindows()
