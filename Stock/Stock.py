@@ -1,4 +1,6 @@
 import urllib.request as req
+import pandas as pd
+
 StockData=repr(input("請輸入查詢股票代號:"))
 
 URL="https://goodinfo.tw/StockInfo/StockDividendPolicy.asp?STOCK_ID="+repr(StockData)+"&MAP_YEAR=DISPATCH_YEAR&SHOW_ROTC="

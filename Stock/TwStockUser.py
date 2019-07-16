@@ -31,6 +31,13 @@ Stockdata=twstock.Stock(""+str(data))
 # Stockdata=twstock.Stock("2887")
 # if Stockdata in twstock.codes:
 StockNews=input("你想知道的資訊:\n1.回傳各日(31天)收盤價\n2.各日之最高價\n3.計算N日平均交易量\n4.計算乖離值\n5.計算KD值\n6.計算5_MACD是否高於20_MACD\n7.判斷是否為4大買賣點\n" )
+
+def stock_interest
+
+
+
+
+
 if StockNews=="1":
     print(Stockdata.price)
 elif StockNews=="2":
@@ -83,6 +90,3 @@ elif StockNews=="7":
     print("四大賣點:量大收黑、量縮價跌、三日均價由上往下、三日均價小於六日均價，符合: ",StockBFP_to_sell)
 else:
     print("無效輸入")
-print("1234")
-# else:
-#     print("錯誤輸入")
