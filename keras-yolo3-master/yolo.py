@@ -18,6 +18,8 @@ from yolo3.utils import letterbox_image
 import os
 from keras.utils import multi_gpu_model
 
+import csv
+
 class YOLO(object):
     _defaults = {
         "model_path": 'logs/000/trained_weights_final.h5',
@@ -145,7 +147,23 @@ class YOLO(object):
             bottom = min(image.size[1], np.floor(bottom + 0.5).astype('int32'))
             right = min(image.size[0], np.floor(right + 0.5).astype('int32'))
             print(label, (left, top), (right, bottom))
+            #-------------------
+            
+            with open('car_test.csv','a', newline='',encoding='utf-8') as car_csv: #紀錄用
+                writer = csv.writer(car_csv)
+                # data_0 = ('類別','左','上','右','下')
+                writer.writerow(['類別','左','上','右','下'])
+                # data_1 = (label,left,top,right,bottom)
+                writer.writerow([label,left,top,right,bottom])
+            with open('car_test_1.csv','w', newline='',encoding='utf-8') as car_csv_1: #實作讀取用
+                writer0 = csv.writer(car_csv_1)
+                writer0.writerow([label,left,top,right,bottom])
 
+
+            # file = open('car_test.csv',mode = 'w') as car_csv:
+            # file.write(label)
+            # file.close()
+            #-------------------
             if top - label_size[1] >= 0:
                 text_origin = np.array([left, top - label_size[1]])
             else:
@@ -210,15 +228,49 @@ def detect_video(yolo, video_path, output_path=""):
             break
     yolo.close_session()
 
+
+import cv2
+cap = cv2.VideoCapture(0)
+ret,camer_frame = cap.read()
+# cv2.imshow('fps',camer_frame)
+cv2.waitKey(0)
+cv2.imwrite('fps.jpg',camer_frame)
+
+        
+    
 if __name__ == '__main__':
+        
+        
     yolo=YOLO()
-    path = '123.jpg'
+    # path = '123.jpg'
+    path_0 = 'fps.jpg'
     try:
-        image = Image.open(path)
+        image = Image.open(path_0)#camer_frame
     except:
         print('Open Error! Try again!')
     else:
         r_image= yolo.detect_image(image)
         r_image.show()
+        
+    
+
+
+
 
     yolo.close_session()
+
+with open("car_test_1.csv",'r',encoding='UTF-8') as cartest_open:  #newline='' 是為了讓換行更可以被解析
+    rows = csv.reader(cartest_open)
+    
+    for row in rows:
+        print(row[0])
+        car = 'car'
+        moto = 'moto'
+        if row[0] == car:
+            print('是小客車')
+        elif row[0] == moto:
+            print('是摩托車')
+
+    
+cap.release()
+cv2.destroyAllWindows()

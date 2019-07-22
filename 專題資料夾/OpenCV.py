@@ -1,5 +1,8 @@
 import cv2
 import matplotlib.pyplot as plt #繪圖套件
+from kerasyolo3master import yolo
+
+
 # coding=utf-8
 
 #未來需改成讀取攝影資訊 並改frame讀每幀--------------
@@ -43,6 +46,9 @@ h = 442
 complete_carpart = thresh2[y:y+h, x:x+w]
 cv2.imshow("consummation",complete_carpart)
 cv2.waitKey(0) # 延遲 不關閉
+
+#---------------------
+
 
 
 
