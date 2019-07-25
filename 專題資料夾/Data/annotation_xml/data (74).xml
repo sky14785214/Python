@@ -1,0 +1,38 @@
+<annotation>
+	<folder>image</folder>
+	<filename>data (74).JPG</filename>
+	<path>C:\Users\12345\Desktop\111\專題資料夾\Data\image\data (74).JPG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>4608</width>
+		<height>3456</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>car_card</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1639</xmin>
+			<ymin>1850</ymin>
+			<xmax>2904</xmax>
+			<ymax>2520</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>moto</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1296</xmin>
+			<ymin>1</ymin>
+			<xmax>3269</xmax>
+			<ymax>3350</ymax>
+		</bndbox>
+	</object>
+</annotation>

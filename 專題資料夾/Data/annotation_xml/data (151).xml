@@ -1,0 +1,38 @@
+<annotation>
+	<folder>image</folder>
+	<filename>data (151).jpg</filename>
+	<path>C:\Users\12345\Desktop\111\專題資料夾\Data\image\data (151).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>4000</width>
+		<height>3000</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>car_card</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2299</xmin>
+			<ymin>1145</ymin>
+			<xmax>2608</xmax>
+			<ymax>2014</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>car</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>943</xmin>
+			<ymin>75</ymin>
+			<xmax>3382</xmax>
+			<ymax>2901</ymax>
+		</bndbox>
+	</object>
+</annotation>
