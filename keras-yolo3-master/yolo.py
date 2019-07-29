@@ -250,6 +250,7 @@ if __name__ == '__main__':
         print('Open Error! Try again!')
     else:
         r_image= yolo.detect_image(image)
+
         r_image.show()
         
     
@@ -259,18 +260,35 @@ if __name__ == '__main__':
 
     yolo.close_session()
 
+
+
+
+
+
+
 with open("car_test_1.csv",'r',encoding='UTF-8') as cartest_open:  #newline='' 是為了讓換行更可以被解析
     rows = csv.reader(cartest_open)
     
     for row in rows:
-        print(row[0])
-        car = 'car'
-        moto = 'moto'
-        if row[0] == car:
-            print('是小客車')
-        elif row[0] == moto:
-            print('是摩托車')
+        # print(row[0])
+        # car = 'car'
+        # moto = 'moto'
+        # if row[0] == car:
+        #     print('是小客車')
+        # elif row[0] == moto:
+        #     print('是摩托車')
+        print(row[1])
+print(row)
 
+# OK_X = str(row[1])
+# OK_y = str(row[2])
+# OK_w = str(row[3])
+# OK_h = str(row[4])
+
+# ok_image = path_0[OK_y:OK_y+OK_h, OK_X:OK_X+OK_w]
+# cv2.imshow('ok_image',ok_image)
+# cv2.waitKey(0)
+    
     
 cap.release()
 cv2.destroyAllWindows()
