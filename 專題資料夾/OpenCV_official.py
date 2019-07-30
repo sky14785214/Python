@@ -25,7 +25,8 @@ while(True):
     # contours,hierarchy = cv2.findContours(thresh_0,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
    
 
-    cv2.imshow("camera0",Gray_frame)
+    # cv2.imshow("camera0",Gray_frame)
+    cv2.imshow("camera0",camera_frame)
     # cv2.imshow("camera1",thresh_0)
     # cv2.imshow("camera2",thresh_1)
     # cv2.imshow("camera3",dilation_1)
