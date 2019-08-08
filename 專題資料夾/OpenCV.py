@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt #繪圖套件
 
 #未來需改成讀取攝影資訊 並改frame讀每幀--------------
 
-# img0=cv2.imread("DSC_0122.jpg",255)
+img0=cv2.imread("DSC_0122.jpg",255)
 img=cv2.imread("DSC_0122.jpg",0) #直接讀取為灰度圖像
 
 #-------------------
@@ -27,13 +27,13 @@ titles = ["Color","Gray","BINARY(兩值化)","BINARY_INV(反二值化)","TRUNC",
 
 #顯示列表--------------
 
-# images = [img0,img,thresh1,thresh2,thresh3,thresh4,thresh5] 
-# for i in range(7):
-#     plt.subplot(2,4,i+1),plt.imshow(images[i],"gray")
-#     plt.title(titles[i])
-#     plt.xticks([]),plt.yticks([])
-# plt.show()                                                
-# print(images[3])
+images = [img0,img,thresh1,thresh2,thresh3,thresh4,thresh5] 
+for i in range(7):
+    plt.subplot(2,4,i+1),plt.imshow(images[i],"gray")
+    plt.title(titles[i])
+    plt.xticks([]),plt.yticks([])
+plt.show()                                                
+print(images[3])
 
 # -------------------
 # 獨立車牌切割出來
