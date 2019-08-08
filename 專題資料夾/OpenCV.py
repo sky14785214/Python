@@ -1,6 +1,6 @@
 import cv2
 import matplotlib.pyplot as plt #繪圖套件
-from kerasyolo3master import yolo
+# from kerasyolo3master import yolo
 
 
 # coding=utf-8
@@ -37,10 +37,12 @@ titles = ["Color","Gray","BINARY(兩值化)","BINARY_INV(反二值化)","TRUNC",
 
 # -------------------
 # 獨立車牌切割出來
+cv2.imshow('test',thresh2)
 x = 2300
 y = 1677
 w = 910
 h = 442
+print(type(x))
 # cv2.imshow("thresh2",thresh2)
 # cv2.imwrite("test0.jpg",thresh2) #儲存opencv圖片
 complete_carpart = thresh2[y:y+h, x:x+w]
