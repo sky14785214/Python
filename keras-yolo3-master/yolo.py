@@ -17,8 +17,10 @@ from yolo3.model import yolo_eval, yolo_body, tiny_yolo_body
 from yolo3.utils import letterbox_image
 import os
 from keras.utils import multi_gpu_model
-
+#--
 import csv
+import pytesseract
+from PIL import Image
 
 class YOLO(object):
     _defaults = {
@@ -234,14 +236,14 @@ cap = cv2.VideoCapture(0)
 ret,camer_frame = cap.read()
 # cv2.imshow('fps',camer_frame)
 cv2.waitKey(0)
-cv2.imwrite('fps.jpg',camer_frame)
+cv2.imwrite('fps.jpg',camer_frame) #擷取畫面　寫成fps.jpg
 
         
     
 if __name__ == '__main__':
         
-        
-    yolo=YOLO()
+    # 打開yolo辨視 fps.jpg
+    yolo=YOLO() 
     # path = '123.jpg'
     path_0 = 'fps.jpg'
     try:
@@ -265,7 +267,7 @@ if __name__ == '__main__':
 
 
 
-
+#讀取154-162行寫入的標籤 和 辨視位子
 with open("car_test_1.csv",'r',encoding='UTF-8') as cartest_open:  #newline='' 是為了讓換行更可以被解析
     rows = csv.reader(cartest_open)
     
@@ -277,26 +279,38 @@ with open("car_test_1.csv",'r',encoding='UTF-8') as cartest_open:  #newline='' �
         car = 'car'
         moto = 'moto'
         if row_test[0:3] == car:
-            print('是小客車')
+            print('小客車')
         elif row_test[0:4] == moto:
-            print('是摩托車')
+            print('摩托車')
         else:
             print('無')
         # print(row[1])
-print(row)
+# print(row)
 # print(type(row))
 
-OK_X = int(row[1])
-OK_y = int(row[2])
-OK_w = int(row[3])
-OK_h = int(row[4])
+OK_X = int(row[1])+13
+OK_y = int(row[2])+18
+OK_w = int(row[3])-15
+OK_h = int(row[4])-11
 # print(type(path_0))
 
 path_1 = cv2.imread("fps.jpg")
-ok_image = path_1[OK_y:OK_y+OK_h, OK_X:OK_X+OK_w]
-cv2.imshow('ok_image',ok_image)
+ok_image = path_1[OK_y:OK_h, OK_X:OK_w]
+
+Gray_ok_image = cv2.cvtColor(ok_image,cv2.COLOR_BGR2GRAY) #讀取鏡頭畫面並灰化
+
+ret,thresh_car_card = cv2.threshold(Gray_ok_image,140,255,cv2.THRESH_BINARY) #車牌切割後　二值化
+cv2.imshow('ok_image',thresh_car_card)
+cv2.imwrite('car_card.jpg', thresh_car_card)   #輸出切割後車牌
 cv2.waitKey(0)
     
-    
+# ocr 光學辨識 ----- 
+
+pytesseract.pytesseract.tesseract_cmd = 'C:\Program Files (x86)\Tesseract-OCR/tesseract.exe'
+image = Image.open(r"car_card.jpg")
+car_card_number = pytesseract.image_to_string(image)
+print(car_card_number)  # 辨視後輸出車牌
+
+# -----
 cap.release()
 cv2.destroyAllWindows()
