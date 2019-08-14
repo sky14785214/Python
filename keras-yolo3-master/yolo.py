@@ -288,10 +288,10 @@ with open("car_test_1.csv",'r',encoding='UTF-8') as cartest_open:  #newline='' �
 # print(row)
 # print(type(row))
 
-OK_X = int(row[1])+13
+OK_X = int(row[1])+10
 OK_y = int(row[2])+18
-OK_w = int(row[3])-15
-OK_h = int(row[4])-11
+OK_w = int(row[3])-11
+OK_h = int(row[4])-8
 # print(type(path_0))
 
 path_1 = cv2.imread("fps.jpg")
@@ -309,7 +309,28 @@ cv2.waitKey(0)
 pytesseract.pytesseract.tesseract_cmd = 'C:\Program Files (x86)\Tesseract-OCR/tesseract.exe'
 image = Image.open(r"car_card.jpg")
 car_card_number = pytesseract.image_to_string(image)
-print(car_card_number)  # 辨視後輸出車牌
+# print(car_card_number)  # 辨視後輸出車牌
+
+
+for a in car_card_number:
+    n = 0
+    n = str(n)
+    # print(type(n))
+    if a == "I":
+        # car_card_number[n] = "1"
+        car_card_number = car_card_number[:len(n)-1] + str(1) + car_card_number[len(n):]
+        # del car_card_number[n]
+        # car_card_number.instert(a,1)
+        
+        continue
+    elif a == "O":
+        # car_card_number[n] = "0"
+        car_card_number = car_card_number[:len(n)] + str(0) + car_card_number[len(n):]
+        # del car_card_number[n]
+        # car_card_number.instert(a,0)
+        continue
+    n = n + str(1) #python并不能像java一样，在做拼接的时候自动把类型转换为string类型;
+print(car_card_number)
 
 # -----
 cap.release()

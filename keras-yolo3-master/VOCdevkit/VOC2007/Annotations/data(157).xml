@@ -1,13 +1,13 @@
 <annotation>
 	<folder>image</folder>
-	<filename>data(157).jpg</filename>
-	<path>D:\專題\專題資料夾\Data\image\data(157).jpg</path>
+	<filename>data (157).jpg</filename>
+	<path>C:\Users\12345\Desktop\111\專題資料夾\Data\image\data (157).jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
 	<size>
 		<width>3000</width>
-		<height>4000</height>
+		<height>3000</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>783</xmin>
-			<ymin>2274</ymin>
-			<xmax>1468</xmax>
-			<ymax>2567</ymax>
+			<xmin>1825</xmin>
+			<ymin>1197</ymin>
+			<xmax>2099</xmax>
+			<ymax>1871</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -29,34 +29,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>20</xmin>
-			<ymin>100</ymin>
-			<xmax>2475</xmax>
-			<ymax>2567</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>car_card</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>2668</xmin>
-			<ymin>563</ymin>
-			<xmax>2868</xmax>
-			<ymax>681</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>car</name>
-		<pose>Unspecified</pose>
-		<truncated>1</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>2490</xmin>
-			<ymin>200</ymin>
-			<xmax>3000</xmax>
-			<ymax>899</ymax>
+			<xmin>534</xmin>
+			<ymin>214</ymin>
+			<xmax>2786</xmax>
+			<ymax>2871</ymax>
 		</bndbox>
 	</object>
 </annotation>

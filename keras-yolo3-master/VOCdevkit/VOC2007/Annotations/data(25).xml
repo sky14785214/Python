@@ -1,7 +1,7 @@
 <annotation>
 	<folder>image</folder>
-	<filename>data(25).JPG</filename>
-	<path>C:\Users\admin\Desktop\python\專題資料夾\Data\image\data(25).JPG</path>
+	<filename>data (25).JPG</filename>
+	<path>C:\Users\12345\Desktop\111\專題資料夾\Data\image\data (25).JPG</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -17,22 +17,22 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>1876</xmin>
-			<ymin>1835</ymin>
-			<xmax>3026</xmax>
-			<ymax>2440</ymax>
+			<xmin>1879</xmin>
+			<ymin>1840</ymin>
+			<xmax>2999</xmax>
+			<ymax>2425</ymax>
 		</bndbox>
 	</object>
 	<object>
 		<name>moto</name>
 		<pose>Unspecified</pose>
-		<truncated>0</truncated>
+		<truncated>1</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>1561</xmin>
-			<ymin>35</ymin>
-			<xmax>3246</xmax>
-			<ymax>2610</ymax>
+			<xmin>1584</xmin>
+			<ymin>1</ymin>
+			<xmax>3324</xmax>
+			<ymax>2760</ymax>
 		</bndbox>
 	</object>
 </annotation>

@@ -1,13 +1,13 @@
 <annotation>
 	<folder>image</folder>
-	<filename>data(151).jpg</filename>
-	<path>D:\專題\專題資料夾\Data\image\data(151).jpg</path>
+	<filename>data (151).jpg</filename>
+	<path>C:\Users\12345\Desktop\111\專題資料夾\Data\image\data (151).jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
 	<size>
-		<width>3000</width>
-		<height>4000</height>
+		<width>4000</width>
+		<height>3000</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>1216</xmin>
-			<ymin>1963</ymin>
-			<xmax>2320</xmax>
-			<ymax>2448</ymax>
+			<xmin>2299</xmin>
+			<ymin>1145</ymin>
+			<xmax>2608</xmax>
+			<ymax>2014</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -29,10 +29,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>27</xmin>
-			<ymin>74</ymin>
-			<xmax>2999</xmax>
-			<ymax>3506</ymax>
+			<xmin>943</xmin>
+			<ymin>75</ymin>
+			<xmax>3382</xmax>
+			<ymax>2901</ymax>
 		</bndbox>
 	</object>
 </annotation>

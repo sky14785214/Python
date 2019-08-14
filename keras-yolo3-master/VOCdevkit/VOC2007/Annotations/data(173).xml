@@ -1,7 +1,7 @@
 <annotation>
 	<folder>image</folder>
-	<filename>data(173).jpg</filename>
-	<path>D:\專題\專題資料夾\Data\image\data(173).jpg</path>
+	<filename>data (173).jpg</filename>
+	<path>C:\Users\12345\Desktop\111\專題資料夾\Data\image\data (173).jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>1936</xmin>
-			<ymin>803</ymin>
-			<xmax>2607</xmax>
-			<ymax>2283</ymax>
+			<xmin>2504</xmin>
+			<ymin>997</ymin>
+			<xmax>2830</xmax>
+			<ymax>1610</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -29,10 +29,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>36</xmin>
-			<ymin>16</ymin>
-			<xmax>3836</xmax>
-			<ymax>2935</ymax>
+			<xmin>1308</xmin>
+			<ymin>84</ymin>
+			<xmax>3312</xmax>
+			<ymax>2740</ymax>
 		</bndbox>
 	</object>
 </annotation>
