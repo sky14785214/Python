@@ -21,15 +21,16 @@ from keras.utils import multi_gpu_model
 import csv
 import pytesseract
 from PIL import Image
+import cv2
 
 class YOLO(object):
     _defaults = {
-        "model_path": 'logs/000/trained_weights_final.h5',
-        "anchors_path": 'model_data/yolo_anchors.txt',
-        "classes_path": 'model_data/my_class.txt',
+        "model_path": 'trained_weights_final.h5',
+        "anchors_path": 'D:\Git\keras-yolo3-master\model_data\yolo_anchors.txt',
+        "classes_path": 'D:\Git\keras-yolo3-master\model_data\my_class.txt',
         "score" : 0.3,
         "iou" : 0.45,
-        "model_image_size" : (416, 416),
+        "model_image_size" : (512, 288),
         "gpu_num" : 1,
     }
 
@@ -231,16 +232,23 @@ def detect_video(yolo, video_path, output_path=""):
     yolo.close_session()
 
 
-import cv2
-cap = cv2.VideoCapture(0)
-ret,camer_frame = cap.read()
-# cv2.imshow('fps',camer_frame)
-cv2.waitKey(0)
-cv2.imwrite('fps.jpg',camer_frame) #擷取畫面　寫成fps.jpg
+# import cv2
+# cap = cv2.VideoCapture(0)
+# ret,camer_frame = cap.read()
+# # cv2.imshow('fps',camer_frame)
+# cv2.waitKey(0)
+# cv2.imwrite('fps.jpg',camer_frame) #擷取畫面　寫成fps.jpg
 
         
     
 if __name__ == '__main__':
+#-------
+
+    cap = cv2.VideoCapture(0)
+    ret,camer_frame = cap.read()
+    # cv2.imshow('fps',camer_frame)
+    cv2.waitKey(0)
+    cv2.imwrite('fps.jpg',camer_frame) #擷取畫面　寫成fps.jpg
         
     # 打開yolo辨視 fps.jpg
     yolo=YOLO() 
@@ -260,78 +268,81 @@ if __name__ == '__main__':
 
 
 
+    #讀取154-162行寫入的標籤 和 辨視位子
+    with open("car_test_1.csv",'r',encoding='UTF-8') as cartest_open:  #newline='' 是為了讓換行更可以被解析
+        rows = csv.reader(cartest_open)
+        
+        for row in rows:
+            row_test = row[0]
+            # print(row_test)
+            # row_test1 = row_test[0:3]
+            # print(row_test1)
+            car = 'car'
+            moto = 'moto'
+            if row_test[0:3] == car:
+                print('小客車')
+            elif row_test[0:4] == moto:
+                print('摩托車')
+            else:
+                print('無')
+            # print(row[1])
+    # print(row)
+    # print(type(row))
+
+    OK_X = int(row[1])
+    OK_y = int(row[2])
+    OK_w = int(row[3])
+    OK_h = int(row[4])
+    # print(type(path_0))
+
+    path_1 = cv2.imread("fps.jpg")
+    print(type(path_1))
+
+    ok_image = path_1[OK_y:OK_h, OK_X:OK_w]
+
+    Gray_ok_image = cv2.cvtColor(ok_image,cv2.COLOR_BGR2GRAY) #讀取鏡頭畫面並灰化
+
+    ret,thresh_car_card = cv2.threshold(Gray_ok_image,140,255,cv2.THRESH_BINARY) #車牌切割後　二值化
+    cv2.imshow('ok_image',thresh_car_card)
+    cv2.imwrite('car_card.jpg', thresh_car_card)   #輸出切割後車牌
+    cv2.waitKey(0)
+        
+    # ocr 光學辨識 ----- 
+
+    pytesseract.pytesseract.tesseract_cmd = 'C://Program Files (x86)/Tesseract-OCR/tesseract.exe'
+    image = Image.open(r"car_card.jpg")
+    car_card_number = pytesseract.image_to_string(image)
+    print(car_card_number)  # 辨視後輸出車牌
+
+
+    for a in car_card_number:
+        n = 0
+        n = str(n)
+        # print(type(n))
+        if a == "I":
+            # car_card_number[n] = "1"
+            car_card_number = car_card_number[:len(n)-1] + str(1) + car_card_number[len(n):]
+            # del car_card_number[n]
+            # car_card_number.instert(a,1)
+        
+            continue
+        elif a == "o":
+            # car_card_number[n] = "0"
+            car_card_number = car_card_number[:len(n)] + str(0) + car_card_number[len(n):]
+            # del car_card_number[n]
+            # car_card_number.instert(a,0)
+            continue
+        n = n + str(1) #python并不能像java一样，在做拼接的时候自动把类型转换为string类型;
+    print(car_card_number)
+
+    
+
+    # -----
+    cap.release()
+    cv2.destroyAllWindows()
+
     yolo.close_session()
 
 
 
 
-
-
-#讀取154-162行寫入的標籤 和 辨視位子
-with open("car_test_1.csv",'r',encoding='UTF-8') as cartest_open:  #newline='' 是為了讓換行更可以被解析
-    rows = csv.reader(cartest_open)
-    
-    for row in rows:
-        row_test = row[0]
-        # print(row_test)
-        # row_test1 = row_test[0:3]
-        # print(row_test1)
-        car = 'car'
-        moto = 'moto'
-        if row_test[0:3] == car:
-            print('小客車')
-        elif row_test[0:4] == moto:
-            print('摩托車')
-        else:
-            print('無')
-        # print(row[1])
-# print(row)
-# print(type(row))
-
-OK_X = int(row[1])+10
-OK_y = int(row[2])+18
-OK_w = int(row[3])-11
-OK_h = int(row[4])-8
-# print(type(path_0))
-
-path_1 = cv2.imread("fps.jpg")
-ok_image = path_1[OK_y:OK_h, OK_X:OK_w]
-
-Gray_ok_image = cv2.cvtColor(ok_image,cv2.COLOR_BGR2GRAY) #讀取鏡頭畫面並灰化
-
-ret,thresh_car_card = cv2.threshold(Gray_ok_image,140,255,cv2.THRESH_BINARY) #車牌切割後　二值化
-cv2.imshow('ok_image',thresh_car_card)
-cv2.imwrite('car_card.jpg', thresh_car_card)   #輸出切割後車牌
-cv2.waitKey(0)
-    
-# ocr 光學辨識 ----- 
-
-pytesseract.pytesseract.tesseract_cmd = 'C:\Program Files (x86)\Tesseract-OCR/tesseract.exe'
-image = Image.open(r"car_card.jpg")
-car_card_number = pytesseract.image_to_string(image)
-# print(car_card_number)  # 辨視後輸出車牌
-
-
-for a in car_card_number:
-    n = 0
-    n = str(n)
-    # print(type(n))
-    if a == "I":
-        # car_card_number[n] = "1"
-        car_card_number = car_card_number[:len(n)-1] + str(1) + car_card_number[len(n):]
-        # del car_card_number[n]
-        # car_card_number.instert(a,1)
-        
-        continue
-    elif a == "O":
-        # car_card_number[n] = "0"
-        car_card_number = car_card_number[:len(n)] + str(0) + car_card_number[len(n):]
-        # del car_card_number[n]
-        # car_card_number.instert(a,0)
-        continue
-    n = n + str(1) #python并不能像java一样，在做拼接的时候自动把类型转换为string类型;
-print(car_card_number)
-
-# -----
-cap.release()
-cv2.destroyAllWindows()
