@@ -30,7 +30,7 @@ class YOLO(object):
         "classes_path": 'D:\Git\keras-yolo3-master\model_data\my_class.txt',
         "score" : 0.3,
         "iou" : 0.45,
-        "model_image_size" : (512, 288),
+        "model_image_size" : (1024, 576),
         "gpu_num" : 1,
     }
 
@@ -289,10 +289,10 @@ if __name__ == '__main__':
     # print(row)
     # print(type(row))
 
-    OK_X = int(row[1])
-    OK_y = int(row[2])
-    OK_w = int(row[3])
-    OK_h = int(row[4])
+    OK_X = int(row[1])+int(23)
+    OK_y = int(row[2])+int(5)
+    OK_w = int(row[3])-int(23)
+    OK_h = int(row[4])-int(5)
     # print(type(path_0))
 
     path_1 = cv2.imread("fps.jpg")
