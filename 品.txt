@@ -1,0 +1,5 @@
+tesseract num.font.exp6.tif num.font.exp6 batch.nochop makebox
+
+
+
+num.font.exp6
