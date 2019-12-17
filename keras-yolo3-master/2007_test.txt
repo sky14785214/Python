@@ -1,0 +1,225 @@
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(1).jpg 957,26,3772,3411,2 1528,2116,3128,3020,0
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(101).jpg 1739,1335,3044,2060,0 1179,35,3464,2680,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(102).jpg 1584,1470,3274,2355,0 1049,45,3689,3410,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(106).jpg 1624,2035,3004,2740,0 1139,60,3344,3400,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(107).jpg 1564,1885,3074,2700,0 1135,1,3409,3400,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(109).jpg 1514,1475,2819,2210,0 1179,40,3204,3205,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(113).jpg 1629,1650,3059,2360,0 1319,10,3469,2975,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(115).jpg 1519,1670,2839,2375,0 1169,1,3374,3180,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(117).jpg 1235,1809,1752,2091,0 493,944,2435,2573,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(119).jpg 1435,1820,1805,1961,0 538,1,2923,2361,1 199,1456,323,1556,0 46,1226,635,1826,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(121).jpg 1476,2273,2023,2532,0 1,1136,2576,3179,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(124).jpg 1458,2085,1799,2291,0 1,879,2182,2585,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(126).jpg 1064,1538,1946,2056,0 19,1,2988,3009,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(127).jpg 1370,1567,1976,1861,0 33,1,2982,2767,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(128).jpg 1017,1409,1588,1720,0 88,614,2270,2520,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(129).jpg 1470,2403,2093,2738,0 11,1061,2899,3673,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(133).jpg 1246,1873,2205,2309,0 11,38,2964,3244,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(135).jpg 1458,1497,2346,1903,0 1,12,2988,3150,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(14).jpg 1969,1465,3029,2030,0 1796,1,3664,3095,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(144).jpg 1223,1914,1952,2250,0 1,30,2882,2367,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(146).jpg 2299,1166,2617,2010,0 347,36,3370,3000,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(154).jpg 2217,1123,2464,1879,0 686,53,3108,2975,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(155).jpg 2317,1093,2617,1727,0 1017,219,3286,2914,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(158).jpg 1969,1193,2256,1832,0 638,149,2960,2875,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(159).jpg 2004,1088,2295,1758,0 475,1,2921,2949,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(16).jpg 1984,1945,3194,2590,0 1593,1,3869,3430,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(163).jpg 2199,1284,2451,1871,0 969,362,2969,2901,1 799,1693,956,1797,2 804,1549,977,1671,2 799,1401,995,1523,2 834,1279,969,1384,2 847,1153,999,1258,2 825,1001,1012,1114,2 791,832,1012,971,2 843,740,1017,858,2 864,627,1030,749,2 882,506,1047,623,2 891,375,1034,514,2 891,171,1030,340,2 904,1745,921,1793,0 895,1601,930,1649,0 899,1432,921,1488,0 917,1314,960,1362,0 904,1188,938,1236,0 908,1023,951,1088,0 925,788,960,836,0 930,662,977,723,0 943,527,991,597,0 934,384,995,449,0 951,232,995,306,0
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(166).jpg 2708,1184,3021,1823,0 1117,88,3725,2945,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(17).jpg 1989,1420,3239,2110,0 1546,1,3729,3365,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(170).jpg 3073,1188,3317,1840,0 1273,179,3364,2797,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(173).jpg 2504,997,2830,1610,0 1308,84,3312,2740,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(174).jpg 2564,588,2791,1114,0 1177,336,3395,2753,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(176).jpg 2782,1245,3051,1793,0 1782,232,3630,2740,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(177).jpg 2617,1158,2899,1779,0 1538,66,3573,2940,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(181).jpg 2577,1040,2873,1832,0 1273,1,3647,2862,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(182).jpg 2899,1275,3134,1853,0 1069,140,3351,2827,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(184).jpg 2530,1214,2825,1906,0 1317,145,3621,2945,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(186).jpg 2430,1053,2764,1693,0 1364,62,3491,2910,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(190).jpg 2717,1193,3030,1910,0 1308,149,3725,2932,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(193).jpg 2577,1088,2886,1788,0 1099,132,3525,2827,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(196).jpg 2786,1075,3082,1666,0 1199,101,3556,2849,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(197).jpg 2460,879,2764,1584,0 1208,136,3425,2879,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(198).jpg 2277,745,2499,1227,0 964,127,3382,2893,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(20).jpg 1854,1760,3229,2455,0 1331,1,3664,3355,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(201).jpg 2821,1075,3056,1845,0 1199,23,3586,2888,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(204).jpg 2882,893,3186,1536,0 1121,114,3560,2897,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(205).jpg 2725,971,3082,1597,0 1482,275,3938,2932,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(210).jpg 995,1245,1230,1827,0 1,339,1886,2923,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(213).jpg 1843,1023,2243,1684,0 812,227,3077,2914,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(218).jpg 2947,1175,3208,1849,0 912,36,3369,2914,1 886,2379,1160,2619,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(220).jpg 2156,1127,2438,1753,0 1095,401,3304,2984,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(225).jpg 1995,1014,2282,1575,0 634,253,2838,2832,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(227).jpg 2008,1045,2291,1810,0 899,93,3247,2893,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(236).jpg 1417,1127,1682,1771,0 95,79,2373,2845,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(24).jpg 1869,1670,3049,2330,0 1500,1,3274,3390,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(245).jpg 1821,1079,2217,1762,0 786,271,3125,2932,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(246).jpg 3043,814,3291,1340,0 1934,171,3973,2449,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(247).jpg 2669,1166,3025,1884,0 1586,175,1638,279,0 1421,36,3804,2945,1 1430,40,1773,545,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(248).jpg 2473,849,2786,1497,0 1747,175,1838,288,0 1251,153,3560,2862,1 1517,14,1969,597,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(249).jpg 2417,897,2669,1471,0 1438,293,3299,2497,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(255).jpg 2356,1075,2664,1740,0 864,84,3291,2810,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(256).jpg 2312,1149,2591,1775,0 1069,136,3199,2893,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(269).jpg 1994,2095,2569,2375,0 814,755,3689,3205,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(270).jpg 1969,1715,2909,2130,0 459,230,4359,3370,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(273).jpg 1929,2375,2859,2770,0 459,20,4319,2790,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(274).jpg 2159,1655,2899,2055,0 499,370,3984,2845,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(275).jpg 2079,1765,2899,2090,0 554,440,4304,3385,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(276).jpg 1779,1410,2709,1840,0 14,25,4414,2805,1 399,1,1064,480,1 544,205,704,260,0
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(279).jpg 1679,1445,2684,1820,0 299,300,4114,2915,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(281).jpg 2069,2605,3014,2980,0 759,230,4179,3210,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(285).jpg 2004,2265,2709,2595,0 644,255,4084,2630,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(286).jpg 2009,1875,2779,2250,0 589,325,4184,3235,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(29).jpg 1939,1525,2949,2125,0 1781,1,3374,3130,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(294).jpg 2014,1515,2989,2000,0 10,1,4579,3415,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(297).jpg 2239,1535,3179,2000,0 299,1,4549,3260,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(299).jpg 1884,1700,2679,2095,0 196,1,4079,3045,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(302).jpg 1689,1620,3134,2330,0 1,10,4469,3300,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(304).jpg 1944,1605,3209,2200,0 1,24,4574,3435,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(306).jpg 2094,1950,2819,2285,0 574,565,4339,3435,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(308).jpg 2129,1720,3129,2145,0 709,210,4479,3430,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(310).jpg 1844,1725,2954,2200,0 14,94,4608,3425,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(314).jpg 1849,2280,2444,2625,0 989,510,3884,3075,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(32).jpg 1834,1425,2964,2040,0 1439,1,3384,3235,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(321).jpg 1709,2275,2879,2750,0 9,1,4374,3260,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(324).jpg 1869,1625,2934,2160,0 1,25,4414,3420,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(325).jpg 1894,2265,2864,2720,0 1,1,4604,3440,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(328).jpg 2084,1830,2799,2135,0 1,4,4119,3450,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(33).jpg 1659,1795,2894,2435,0 1213,1,3249,3250,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(333).jpg 1,845,169,1205,1 1869,2670,2844,3055,0 254,590,4159,3060,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(336).jpg 2064,1890,3169,2385,0 1,18,4564,3445,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(337).jpg 2029,1840,3049,2275,0 669,155,4274,3230,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(340).jpg 1034,2370,1869,2800,0 459,55,4424,3345,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(341).jpg 2034,1905,2814,2290,0 794,380,4059,3200,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(346).jpg 1819,2070,2769,2485,0 199,165,4429,3325,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(348).jpg 2169,1740,3129,2190,0 494,235,4584,3270,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(350).jpg 2109,1700,2859,2065,0 809,390,4134,2945,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(352).jpg 2099,2135,2894,2545,0 759,625,4244,3175,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(355).jpg 1349,2135,2044,2495,0 874,235,4129,2960,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(36).jpg 1669,1805,3019,2515,0 1202,1,3499,3445,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(364).jpg 1989,2005,2774,2365,0 619,445,4064,3140,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(368).jpg 2309,2435,3109,2865,0 830,1,4574,3125,1 4484,800,4608,902,0
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(369).jpg 1949,1295,2894,1700,0 634,20,4394,3200,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(37).jpg 1859,1220,2929,1755,0 1499,1,3419,3005,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(370).jpg 2264,2915,3044,3295,0 734,175,4394,3350,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(372).jpg 1814,1975,2749,2390,0 339,280,4269,3385,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(374).jpg 1914,1990,2874,2440,0 257,1,4459,3430,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(376).jpg 2534,2470,3224,2860,0 619,155,4189,3230,1 624,420,1069,1300,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(377).jpg 2024,1665,2829,2075,0 474,495,3899,3360,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(379).jpg 1869,1715,2984,2260,0 341,1,4489,3325,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(381).jpg 1514,2420,2354,2855,0 639,205,3734,3025,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(383).jpg 1914,1915,2549,2265,0 954,130,3939,2765,1 3464,95,3854,440,1 664,690,749,760,0 799,630,919,715,0 589,635,804,860,2 754,560,924,825,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(389).jpg 2174,1510,3274,2100,0 116,1,4564,3210,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(39).jpg 1874,1585,2819,2110,0 1557,1,3044,2880,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(390).jpg 1934,1545,2799,2010,0 448,1,3964,2865,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(391).jpg 1899,2035,2594,2400,0 565,1,3799,3080,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(393).jpg 1864,1895,2924,2385,0 1,54,4274,3430,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(394).jpg 2059,1775,3179,2420,0 1,1,4254,3445,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(397).jpg 2239,1665,3004,2120,0 874,495,3979,2735,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(398).jpg 1989,1355,2624,1695,0 929,410,4094,2870,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(399).jpg 2084,1905,2944,2380,0 549,380,4069,3085,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(401).jpg 2004,1590,2909,2035,0 709,450,3849,2915,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(405).jpg 1964,1645,3104,2175,0 154,1,4284,3070,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(408).jpg 1784,2465,2709,2880,0 499,185,3899,2985,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(41).jpg 1449,1555,2674,2220,0 1265,1,3019,2895,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(410).jpg 2079,1735,2864,2075,0 899,530,4104,2725,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(411).jpg 1934,2610,2849,3030,0 794,640,3954,3075,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(412).jpg 1954,1575,2944,2030,0 584,115,4284,3280,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(413).jpg 1849,1885,2884,2360,0 104,110,4164,3370,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(414).jpg 1889,1350,2974,1895,0 463,1,4419,2915,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(415).jpg 2129,2515,2809,2860,0 834,385,3769,2940,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(419).jpg 1804,2355,2659,2745,0 704,605,3774,3125,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(420).jpg 2039,1765,2979,2190,0 399,255,4489,3280,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(424).jpg 2344,1800,3504,2355,0 774,180,4534,3260,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(425).jpg 1914,1640,3184,2240,0 196,1,4489,3215,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(43).jpg 1744,1890,2754,2430,0 1496,1,3059,3070,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(431).jpg 1884,2720,2674,3085,0 504,245,3989,3140,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(432).jpg 2089,1870,2899,2300,0 689,560,4014,3100,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(434).jpg 1954,1780,3079,2305,0 314,470,4309,3365,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(435).jpg 1974,1850,2904,2325,0 424,375,4184,3190,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(446).jpg 1794,1690,3084,2330,0 159,125,4464,3425,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(449).jpg 1674,1540,2689,2025,0 364,120,3919,2950,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(451).jpg 1904,1950,2994,2435,0 344,135,4524,3395,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(453).jpg 1989,1985,3024,2460,0 89,30,4554,3375,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(458).jpg 2209,2625,3144,3095,0 588,1,4589,2865,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(46).jpg 1614,1700,2829,2350,0 1361,1,3079,3120,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(466).jpg 1664,1435,2814,2010,0 1,42,4424,3055,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(469).jpg 1609,1485,2784,2030,0 134,1,4149,3035,1 1,375,249,710,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(47).jpg 1644,2070,3059,2820,0 1205,1,3384,3385,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(471).jpg 1999,1795,3074,2360,0 603,1,4584,3250,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(472).jpg 1914,1875,2874,2325,0 444,320,4304,3120,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(479).jpg 1969,1730,2784,2110,0 534,1,4214,3375,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(481).jpg 1884,1850,3024,2290,0 419,325,4414,3260,1 3704,425,4599,1083,1 4464,735,4608,803,0
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(488).jpg 2094,2625,2759,2890,0 849,735,3879,2915,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(489).jpg 1714,1615,2684,2035,0 479,420,3794,2835,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(49).jpg 1889,2240,2879,2850,0 1639,1,3099,3210,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(490).jpg 1884,1695,2914,2240,0 34,75,4514,3335,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(492).jpg 1804,1490,2804,2045,0 209,190,4139,2950,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(494).jpg 1814,1660,2694,2100,0 569,230,3784,2825,1 719,555,1069,830,1 804,670,909,715,0
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(496).jpg 1589,1805,2899,2400,0 89,175,4234,3200,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(497).jpg 1729,1525,2899,2065,0 169,70,4059,3365,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(500).jpg 2712,1067,2973,1558,0 1499,509,3534,3000,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(501).jpg 2312,945,2577,1641,0 1086,306,3286,2901,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(502).jpg 2725,928,3034,1532,0 1256,314,3547,2797,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(504).jpg 2369,954,2734,1523,0 930,175,3599,2958,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(510).jpg 2917,1506,3221,2119,0 1312,223,3738,2806,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(515).jpg 3125,1523,3347,2058,0 1030,449,3573,2858,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(52).jpg 1849,1650,2849,2200,0 1529,5,3224,2965,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(539).jpg 1577,1097,1943,1828,0 282,114,2599,2975,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(540).jpg 2760,1480,3117,2193,0 1377,188,3977,2897,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(541).jpg 3138,801,3499,1349,0 682,75,3769,2997,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(543).jpg 2104,1084,2360,1710,0 695,88,3147,2932,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(545).jpg 3451,1019,3764,1667,0 1160,145,3847,2993,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(547).jpg 2551,845,2873,1371,0 1204,267,3647,2975,1 1256,1145,1604,1654,1 1056,2523,1474,3000,1 904,2714,1091,3000,1 1160,1684,1317,2058,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(55).jpg 1799,1620,2854,2075,0 1556,1,3139,2955,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(561).jpg 2873,1010,3547,2254,0 77,275,3860,2345,2 260,1967,612,2310,1 391,2088,473,2193,0 338,1032,591,1328,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(564).jpg 2647,958,3291,2154,0 1,650,3812,2367,2 91,2528,451,2967,1 319,1,604,336,1 230,2767,291,2875,0
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(565).jpg 2269,1054,2821,2084,0 1,675,3112,2249,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(572).jpg 2482,1058,3038,2058,0 1,882,3786,2480,2 1,401,182,698,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(577).jpg 2717,1197,3260,2145,0 1,753,3612,2332,2 143,80,369,414,1 91,514,399,971,1 256,167,312,249,0 199,614,273,701,0
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(578).jpg 2982,923,3464,2001,0 1,605,3499,2275,2 204,201,486,654,1 151,641,477,1041,1 12,2554,304,2897,1
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(581).jpg 1777,1058,2377,2162,0 1,404,3599,2249,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(583).jpg 2051,975,2512,1845,0 1,671,2795,2062,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(585).jpg 2282,967,2747,1962,0 1,422,3156,2328,2 192,1,412,149,0
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(587).jpg 1843,971,2347,1967,0 477,780,3104,2293,2 104,2106,317,2454,0 1,2062,577,2462,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(588).jpg 2247,862,2925,2106,0 1,463,3521,2423,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(590).jpg 2643,1162,3138,2097,0 1,806,3325,2293,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(593).jpg 2256,967,2786,2023,0 1,583,3151,2301,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(595).jpg 2034,784,2743,2023,0 1,322,3699,2588,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(597).jpg 2317,971,2912,2297,0 1,807,3586,2406,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(598).jpg 2451,941,2977,2032,0 1,454,3777,2349,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(599).jpg 1773,1114,2347,2167,0 1,681,3151,2410,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(60).jpg 1429,2140,2984,2925,0 919,1,3319,3405,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(603).jpg 1786,1101,2343,2045,0 751,797,3143,2306,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(606).jpg 2247,949,2773,2058,0 1,569,3108,2484,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(61).jpg 1829,1895,3154,2565,0 1769,1,3359,3410,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(611).jpg 2447,971,2956,2019,0 1,721,3225,2319,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(612).jpg 2434,858,2930,1941,0 399,549,3504,2288,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(615).jpg 2443,554,3034,1775,0 1,27,3869,2193,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(618).jpg 2212,923,2734,1941,0 951,549,3360,2219,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(621).jpg 2647,1193,3095,2154,0 1,919,3286,2288,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(622).jpg 2260,919,2734,1832,0 1,512,3238,2271,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(630).jpg 2143,988,2777,2067,0 1,426,3356,2288,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(631).jpg 2477,832,3195,1945,0 1,329,3277,2467,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(635).jpg 2317,897,2869,1736,0 1,696,3425,2123,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(637).jpg 2451,941,3138,2136,0 1,222,3860,2545,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(638).jpg 2838,775,3551,2054,0 1,474,3964,2475,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(639).jpg 2460,823,3208,2045,0 1,188,3860,2562,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(64).jpg 1914,2440,3069,3000,0 1494,1,3434,3370,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(640).jpg 2477,1071,3169,2388,0 1,781,3673,2641,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(646).jpg 2264,1154,2917,2384,0 1,910,3695,2645,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(649).jpg 2086,832,2704,1875,0 1,573,3369,2184,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(653).jpg 2564,428,3369,1741,0 1,87,3917,2358,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(656).jpg 2569,993,3134,1954,0 1,475,3851,2136,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(657).jpg 2947,580,3434,1488,0 1,191,3595,1549,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(67).jpg 1779,2105,2839,2635,0 1434,1,3004,3120,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(68).jpg 2119,2275,3109,2810,0 1829,1,3274,3185,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(69).jpg 1629,1200,3054,1960,0 1256,1,3519,3335,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(7).jpg 1549,2145,2909,2860,0 1246,1,3339,3415,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(75).jpg 1724,1060,2929,1715,0 1306,1,3384,2985,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(79).jpg 1439,1515,2879,2280,0 1065,1,3299,3420,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(8).jpg 1769,1930,2919,2545,0 1425,1,3269,3405,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(86).jpg 1894,1965,3184,2580,0 1432,1,3499,3375,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(90).jpg 1689,1685,2934,2305,0 1390,1,3284,3325,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(95).jpg 1599,1915,3284,2670,0 1054,1,3734,3405,2
+E:\GitHub\keras-yolo3-master/VOCdevkit/VOC2007/JPEGImages/data(97).jpg 1484,1450,2949,2205,0 974,1,3464,3320,2
