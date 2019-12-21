@@ -265,32 +265,32 @@ def OCR_test(Image_card):
 
 
 def segmentation(card_segmentation):
-    # 1、读取图像，并把图像转换为灰度图像并显示
-    img = cv2.imread(card_segmentation)  # 读取图片
-    img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)   # 转换了灰度化
-    # cv2.imshow('gray', img_gray)  # 显示图片
+    # 1、讀取圖像，把圖向轉為灰階
+    img = cv2.imread(card_segmentation)  # 讀取圖片
+    img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)   # 灰階
+    # cv2.imshow('gray', img_gray)  # 顯示
     cv2.waitKey(0)
     
-    # 2、将灰度图像二值化，设定阈值是100
+    # 2、將灰階圖二值化，阈值是100
     img_thre = img_gray
     cv2.threshold(img_gray, 100, 255, cv2.THRESH_BINARY_INV, img_thre)
     # cv2.imshow('threshold', img_thre)
     cv2.waitKey(0)
     
-    # 3、保存黑白图片
+    # 3、保存黑白圖片
     cv2.imwrite('thre_res.png', img_thre)
     
     # 4、分割字符
-    white = []  # 记录每一列的白色像素总和
+    white = []  # 紀錄每一列的白色像素和
     black = []  # ..........黑色.......
     height = img_thre.shape[0]
     width = img_thre.shape[1]
     white_max = 0
     black_max = 0
-    # 计算每一列的黑白色像素总和
+    # 計算每一列的黑白色像素和
     for i in range(width):
-        s = 0  # 这一列白色总数
-        t = 0  # 这一列黑色总数
+        s = 0  # 這一列白色總数
+        t = 0  # 這一列黑色總数
         for j in range(height):
             if img_thre[j][i] == 255:
                 s += 1
@@ -307,11 +307,11 @@ def segmentation(card_segmentation):
     if black_max > white_max:
         arg = True
     
-    # 分割图像
+    # 分割圖像
     def find_end(start_):
         end_ = start_+1
         for m in range(start_+1, width-1):
-            if (black[m] if arg else white[m]) > (0.85 * black_max if arg else 0.85 * white_max):  # 0.95这个参数请多调整，对应下面的0.05
+            if (black[m] if arg else white[m]) > (0.85 * black_max if arg else 0.85 * white_max):  # 0.95這個参數可以調整，對應下面的0.05 總和為1
                 end_ = m
                 break
         return end_
@@ -322,8 +322,8 @@ def segmentation(card_segmentation):
     while n < width-2:
         n += 1
         if (white[n] if arg else black[n]) > (0.15 * white_max if arg else 0.15 * black_max):
-            # 上面这些判断用来辨别是白底黑字还是黑底白字
-            # 0.05这个参数请多调整，对应上面的0.95
+            # 用来判斷是白底黑字還是黑底白字
+            # 0.05参数可调整，須對應上面的0.95
             start = n
             end = find_end(start)
             n = end
@@ -340,21 +340,21 @@ def detect(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # 高斯平滑
     gaussian = cv2.GaussianBlur(gray, (3, 3), 0, 0, cv2.BORDER_DEFAULT)
-	# 中值滤波
+	# 中值濾波
     median = cv2.medianBlur(gaussian, 5)
 	# Sobel算子，X方向求梯度
     sobel = cv2.Sobel(median, cv2.CV_8U, 1, 0, ksize = 3)
 	# 二值化
     ret, binary = cv2.threshold(sobel, 140, 255, cv2.THRESH_BINARY)
-	# 膨胀和腐蚀操作的核函数
+	# 膨脹和侵蝕操作的核函数
     element1 = cv2.getStructuringElement(cv2.MORPH_RECT, (9, 1))
     element2 = cv2.getStructuringElement(cv2.MORPH_RECT, (7, 6))
     
-	# 膨胀一次，让轮廓突出
+	# 膨胀一次，讓輪廓突出
     dilation = cv2.dilate(binary, element2, iterations = 1)
-	# 腐蚀一次，去掉细节
+	# 侵蝕 去除細節
     erosion = cv2.erode(dilation, element1, iterations = 1)
-	# 再次膨胀，让轮廓明显一些
+	# 再次膨胀，凸顯輪廓
     dilation2 = cv2.dilate(erosion, element2,iterations = 1)
     # print(dilation2)
     # cv2.imshow('dilation2',dilation2)
