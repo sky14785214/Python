@@ -18,28 +18,28 @@ from yolo3.utils import letterbox_image
 import os
 from keras.utils import multi_gpu_model
 #--
-import csv
-import pytesseract
-from PIL import Image
-import cv2
-import serial
-import numpy as np
+import csv #載入csv模組
+import pytesseract # 載入ocr模組
+from PIL import Image #載入image 的 pil含數
+import cv2 # 載入opencv
+import serial # 載入 通訊arduino模型
+import numpy as np # 載入可協助資料處理幫助圖片解析
 
 COM_PORT = 'COM3'    # 指定通訊埠名稱
 BAUD_RATES = 115200    # 設定傳輸速率
 ser = serial.Serial(COM_PORT, BAUD_RATES)   # 初始化序列通訊埠
-label_test = []
-Safenumber=["MPT3983","165BFE","BDC0771","2251WJ"]
-code = ""
+label_test = [] #做為車種存取
+Safenumber=["MPT3983","165BFE","BDC0771","2251WJ"] # 安全車牌設立
+code = "" # 做為資料處理
 class YOLO(object):
     _defaults = {
-        "model_path": 'logs/000/trained_weights_final.h5',
+        "model_path": 'logs/000/trained_weights_final.h5', # 訓練辨識模型路徑
         "anchors_path": 'model_data/yolo_anchors.txt',
-        "classes_path": 'model_data/my_class.txt',
-        "score" : 0.3,
-        "iou" : 0.3,
-        "model_image_size" : (480, 480),
-        "gpu_num" : 1,
+        "classes_path": 'model_data/my_class.txt', # 辨識物件標籤
+        "score" : 0.3, # 全眾參數
+        "iou" : 0.3, # 重疊性參數
+        "model_image_size" : (480, 480), # 圖像輸入解析度
+        "gpu_num" : 1, 
     }
 
     @classmethod
@@ -399,31 +399,25 @@ def detect(img):
 
 def test_new():
     try:
-        image = Image.open(path_0)#camer_frame
+        image = Image.open(path_0)    # 載入路徑圖片
     except:
         print('Open Error! Try again!')
     else:
-        r_image= yolo.detect_image(image)
+        r_image= yolo.detect_image(image) # 使用yolo辨識路徑圖片
 
-        r_image.show()
+        r_image.show() # 顯示圖片
         
         # yolo.close_session()
 
 
-        b = [v.split(' ')[0] for v in label_test]
+        b = [v.split(' ')[0] for v in label_test] # 解析label文字串
         b = [''.join(b)]
-       
-        # print(b)
-        car1 = "carc"
+
+        car1 = "carc"  
         moto1 = "moto"
-        dcar1 = "dcar"
+        dcar1 = "dcar" 
 
-        # print(b)
         for i in b:
-            # print(i[0:4])
-            # print(i[-0:-4])
-            # print(i[0:3])
-
             if i[0:4]  == moto1 :
                 print("車種:機車")
                 break
@@ -438,37 +432,30 @@ def test_new():
                 pass
             
         
-
+        # 讀取先前存取的座標路徑 
         with open("car_test_1.csv",'r',encoding='UTF-8') as cartest_open:  #newline='' 是為了讓換行更可以被解析
             rows = csv.reader(cartest_open)
             
             for row in rows:
-                # print(row)
-                row_test = row[0]
-
-                # print(row_test)
                 
+                row_test = row[0]
+        # x,y,w,h 座標分別為 row[1-4] 以下做為解析列表
         OK_X = int(row[1]) -int(0)
         OK_y = int(row[2]) -int(0)
         OK_w = int(row[3]) +int(0)
         OK_h = int(row[4]) +int(0)
-        # print(type(path_0))
 
         path_1 = cv2.imread("fps.jpg")
-
+        # 切割row列表所提供的座標
         ok_image = path_1[OK_y:OK_h, OK_X:OK_w]
         cv2.imwrite("rgb_card.png",ok_image)
-        # print(path_1)
-
+        # 以下是存一張二值圖 稍後可以做程ocr辨識
         Gray_ok_image = cv2.cvtColor(ok_image,cv2.COLOR_BGR2GRAY) #讀取鏡頭畫面並灰化
 
         ret,thresh_car_card = cv2.threshold(Gray_ok_image,100,255,cv2.THRESH_BINARY) #車牌切割後　二值化
 
-
-
-        # cv2.imshow('ok_image',thresh_car_card)
         cv2.imwrite('car_card.png', thresh_car_card)   #輸出切割後車牌
-        # cv2.waitKey(0)
+        
         cap.release()
 
         
