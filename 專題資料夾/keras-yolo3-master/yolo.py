@@ -18,28 +18,28 @@ from yolo3.utils import letterbox_image
 import os
 from keras.utils import multi_gpu_model
 #--
-import csv #載入csv模組
-import pytesseract # 載入ocr模組
-from PIL import Image #載入image 的 pil含數
-import cv2 # 載入opencv
-import serial # 載入 通訊arduino模型
-import numpy as np # 載入可協助資料處理幫助圖片解析
+import csv
+import pytesseract
+from PIL import Image
+import cv2
+import serial
+import numpy as np
 
 COM_PORT = 'COM3'    # 指定通訊埠名稱
 BAUD_RATES = 115200    # 設定傳輸速率
 ser = serial.Serial(COM_PORT, BAUD_RATES)   # 初始化序列通訊埠
-label_test = [] #做為車種存取
-Safenumber=["MPT3983","165BFE","BDC0771","2251WJ"] # 安全車牌設立
-code = "" # 做為資料處理
+label_test = []
+Safenumber=["MPT3983","165BFE","BDC0771","2251WJ"]
+code = ""
 class YOLO(object):
     _defaults = {
-        "model_path": 'logs/000/trained_weights_final.h5', # 訓練辨識模型路徑
+        "model_path": 'logs/000/trained_weights_final.h5',
         "anchors_path": 'model_data/yolo_anchors.txt',
-        "classes_path": 'model_data/my_class.txt', # 辨識物件標籤
-        "score" : 0.3, # 全眾參數
-        "iou" : 0.3, # 重疊性參數
-        "model_image_size" : (480, 480), # 圖像輸入解析度
-        "gpu_num" : 1, 
+        "classes_path": 'model_data/my_class.txt',
+        "score" : 0.3,
+        "iou" : 0.3,
+        "model_image_size" : (480, 480),
+        "gpu_num" : 1,
     }
 
     @classmethod
@@ -265,32 +265,32 @@ def OCR_test(Image_card):
 
 
 def segmentation(card_segmentation):
-    # 1、讀取圖像，把圖向轉為灰階
-    img = cv2.imread(card_segmentation)  # 讀取圖片
-    img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)   # 灰階
-    # cv2.imshow('gray', img_gray)  # 顯示
+    # 1、读取图像，并把图像转换为灰度图像并显示
+    img = cv2.imread(card_segmentation)  # 读取图片
+    img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)   # 转换了灰度化
+    # cv2.imshow('gray', img_gray)  # 显示图片
     cv2.waitKey(0)
     
-    # 2、將灰階圖二值化，阈值是100
+    # 2、将灰度图像二值化，设定阈值是100
     img_thre = img_gray
     cv2.threshold(img_gray, 100, 255, cv2.THRESH_BINARY_INV, img_thre)
     # cv2.imshow('threshold', img_thre)
     cv2.waitKey(0)
     
-    # 3、保存黑白圖片
+    # 3、保存黑白图片
     cv2.imwrite('thre_res.png', img_thre)
     
     # 4、分割字符
-    white = []  # 紀錄每一列的白色像素和
+    white = []  # 记录每一列的白色像素总和
     black = []  # ..........黑色.......
     height = img_thre.shape[0]
     width = img_thre.shape[1]
     white_max = 0
     black_max = 0
-    # 計算每一列的黑白色像素和
+    # 计算每一列的黑白色像素总和
     for i in range(width):
-        s = 0  # 這一列白色總数
-        t = 0  # 這一列黑色總数
+        s = 0  # 这一列白色总数
+        t = 0  # 这一列黑色总数
         for j in range(height):
             if img_thre[j][i] == 255:
                 s += 1
@@ -307,11 +307,11 @@ def segmentation(card_segmentation):
     if black_max > white_max:
         arg = True
     
-    # 分割圖像
+    # 分割图像
     def find_end(start_):
         end_ = start_+1
         for m in range(start_+1, width-1):
-            if (black[m] if arg else white[m]) > (0.85 * black_max if arg else 0.85 * white_max):  # 0.95這個参數可以調整，對應下面的0.05 總和為1
+            if (black[m] if arg else white[m]) > (0.85 * black_max if arg else 0.85 * white_max):  # 0.95这个参数请多调整，对应下面的0.05
                 end_ = m
                 break
         return end_
@@ -322,8 +322,8 @@ def segmentation(card_segmentation):
     while n < width-2:
         n += 1
         if (white[n] if arg else black[n]) > (0.15 * white_max if arg else 0.15 * black_max):
-            # 用来判斷是白底黑字還是黑底白字
-            # 0.05参数可调整，須對應上面的0.95
+            # 上面这些判断用来辨别是白底黑字还是黑底白字
+            # 0.05这个参数请多调整，对应上面的0.95
             start = n
             end = find_end(start)
             n = end
@@ -340,21 +340,21 @@ def detect(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # 高斯平滑
     gaussian = cv2.GaussianBlur(gray, (3, 3), 0, 0, cv2.BORDER_DEFAULT)
-	# 中值濾波
+	# 中值滤波
     median = cv2.medianBlur(gaussian, 5)
 	# Sobel算子，X方向求梯度
     sobel = cv2.Sobel(median, cv2.CV_8U, 1, 0, ksize = 3)
 	# 二值化
     ret, binary = cv2.threshold(sobel, 140, 255, cv2.THRESH_BINARY)
-	# 膨脹和侵蝕操作的核函数
+	# 膨胀和腐蚀操作的核函数
     element1 = cv2.getStructuringElement(cv2.MORPH_RECT, (9, 1))
     element2 = cv2.getStructuringElement(cv2.MORPH_RECT, (7, 6))
     
-	# 膨胀一次，讓輪廓突出
+	# 膨胀一次，让轮廓突出
     dilation = cv2.dilate(binary, element2, iterations = 1)
-	# 侵蝕 去除細節
+	# 腐蚀一次，去掉细节
     erosion = cv2.erode(dilation, element1, iterations = 1)
-	# 再次膨胀，凸顯輪廓
+	# 再次膨胀，让轮廓明显一些
     dilation2 = cv2.dilate(erosion, element2,iterations = 1)
     # print(dilation2)
     # cv2.imshow('dilation2',dilation2)
@@ -399,25 +399,31 @@ def detect(img):
 
 def test_new():
     try:
-        image = Image.open(path_0)    # 載入路徑圖片
+        image = Image.open(path_0)#camer_frame
     except:
         print('Open Error! Try again!')
     else:
-        r_image= yolo.detect_image(image) # 使用yolo辨識路徑圖片
+        r_image= yolo.detect_image(image)
 
-        r_image.show() # 顯示圖片
+        r_image.show()
         
         # yolo.close_session()
 
 
-        b = [v.split(' ')[0] for v in label_test] # 解析label文字串
+        b = [v.split(' ')[0] for v in label_test]
         b = [''.join(b)]
-
-        car1 = "carc"  
+       
+        # print(b)
+        car1 = "carc"
         moto1 = "moto"
-        dcar1 = "dcar" 
+        dcar1 = "dcar"
 
+        # print(b)
         for i in b:
+            # print(i[0:4])
+            # print(i[-0:-4])
+            # print(i[0:3])
+
             if i[0:4]  == moto1 :
                 print("車種:機車")
                 break
@@ -432,30 +438,37 @@ def test_new():
                 pass
             
         
-        # 讀取先前存取的座標路徑 
+
         with open("car_test_1.csv",'r',encoding='UTF-8') as cartest_open:  #newline='' 是為了讓換行更可以被解析
             rows = csv.reader(cartest_open)
             
             for row in rows:
-                
+                # print(row)
                 row_test = row[0]
-        # x,y,w,h 座標分別為 row[1-4] 以下做為解析列表
+
+                # print(row_test)
+                
         OK_X = int(row[1]) -int(0)
         OK_y = int(row[2]) -int(0)
         OK_w = int(row[3]) +int(0)
         OK_h = int(row[4]) +int(0)
+        # print(type(path_0))
 
         path_1 = cv2.imread("fps.jpg")
-        # 切割row列表所提供的座標
+
         ok_image = path_1[OK_y:OK_h, OK_X:OK_w]
         cv2.imwrite("rgb_card.png",ok_image)
-        # 以下是存一張二值圖 稍後可以做程ocr辨識
+        # print(path_1)
+
         Gray_ok_image = cv2.cvtColor(ok_image,cv2.COLOR_BGR2GRAY) #讀取鏡頭畫面並灰化
 
         ret,thresh_car_card = cv2.threshold(Gray_ok_image,100,255,cv2.THRESH_BINARY) #車牌切割後　二值化
 
+
+
+        # cv2.imshow('ok_image',thresh_car_card)
         cv2.imwrite('car_card.png', thresh_car_card)   #輸出切割後車牌
-        
+        # cv2.waitKey(0)
         cap.release()
 
         
