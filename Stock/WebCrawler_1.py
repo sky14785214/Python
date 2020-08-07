@@ -1,4 +1,10 @@
 import urllib.request as req
+
+def inputstock(url):
+    url="https://histock.tw/stock/financial.aspx?no="+ url +"&t=2"
+
+
+
 url="https://histock.tw/stock/financial.aspx?no=2887&t=2"
 
 #附加headers 偽裝一般使用者
@@ -15,16 +21,20 @@ root = bs4.BeautifulSoup(data,"html.parser")
 
 EPS_5Y = []
 
+
+def inputstock(url):
+    url="https://histock.tw/stock/financial.aspx?no="+ url +"&t=2"
+
+
+
+
 def eps(url_data,eps5y):
     EPS_bf4 = []
     titles = root.find_all("td",class_="b-b") # 尋找所有 class=title 的div標
-    EPS_bf4.append(titles[2])
-    EPS_bf4.append(titles[7])
-    EPS_bf4.append(titles[12])
-    EPS_bf4.append(titles[17])
-    EPS_bf4.append(titles[22])
-    EPS_bf4.append(titles[27])
-    EPS_bf4.append(titles[32])
+
+    for i in range(2,32,5):
+        EPS_bf4.append(titles[i])        
+
     for i in EPS_bf4:
         EPS_5Y.append(i.string)
 
