@@ -15,8 +15,11 @@ IF = uint8(IF);
 % input plaintext ,key type and key string
 %
 plaintext = '00112233445566778899aabbccddeeff';
-key_type = 128;
-key_str = '2b7e151628aed2a6abf7158809cf4f3c';
+key_type = 256;
+% key_str = '2b7e151628aed2a6abf7158809cf4f3c';
+% key_str='8e73b0f7da0e6452c810f32b8090791562f8ead2522c6b7b';
+key_str='603deb1015ca71be2b73aef0857d77811f352c073b6108d72d9810a30914dff4';
+
 %
 IN = zeros(1,128/8);
 for i = 1:128/8  %for i in 128/8
@@ -28,7 +31,7 @@ IN = reshape(IN,4,4); % Âà´«¦¨4x4¯x°}
 if key_type==128
     Nk = 4;
     Nr = 10;
-elseif key_type==196
+elseif key_type==192
     Nk = 6;
     Nr = 12;
 elseif key_type==256
@@ -97,14 +100,14 @@ for i=1:16
 end
 %%% 0826
 
-[W, IW] = key_expansion(key,Nr,Nk); % def ·§©À
 %
 % Decryption
 %
 % 0 th round
 %
 IS = uint8(zeros(4,4,Nr+1));
-IS(:,:,1)=bitxor(Ciphe,IW(:,:,1));
+Cipher = reshape(Cipher,4,4);
+IS(:,:,1)=bitxor(Cipher,IW(:,:,1));
 %
 % lst =~ N th round
 %
@@ -122,7 +125,7 @@ for iround=1:Nr
     % InvShiftRow transformation
     %
     for ir = 2:4
-        temp = S(ir,6-ir:4,iround+1);
+        temp = IS(ir,6-ir:4,iround+1);
         IS(ir,ir:4,iround+1) = IS(ir,1:5-ir,iround+1);
         IS(ir,1:ir-1,iround+1) = temp;
     end

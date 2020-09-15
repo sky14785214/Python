@@ -45,7 +45,6 @@ key = zeros(1,key_leng/2) ;
 for i=1 : key_leng/2
     key(i)=hex2dec(key_str((i-1)*2+1:i*2)); % 10ЖiТр16
 end
-
 key = uint8(key);
 %
 % key expansion
