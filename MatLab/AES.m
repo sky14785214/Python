@@ -8,26 +8,29 @@ clc;
 %
 F = [2 3 1 1 ; 1 2 3 1 ; 1 1 2 3 ; 3 1 1 2];
 IF = [14 11 13 9 ; 9 14 11 13 ; 13 9 14 11 ; 11 13 9 14 ];
-F= uint8(F);
+F = uint8(F);
 IF = uint8(IF);
 
 %
 % input plaintext ,key type and key string
 %
 plaintext = '00112233445566778899aabbccddeeff';
-key_type = 256;
-% key_str = '2b7e151628aed2a6abf7158809cf4f3c';
+key_type = 128;
+key_str = '2b7e151628aed2a6abf7158809cf4f3c';
 % key_str='8e73b0f7da0e6452c810f32b8090791562f8ead2522c6b7b';
-key_str='603deb1015ca71be2b73aef0857d77811f352c073b6108d72d9810a30914dff4';
+%key_str='603deb1015ca71be2b73aef0857d77811f352c073b6108d72d9810a30914dff4';
 
 %
 IN = zeros(1,128/8);
 for i = 1:128/8  %for i in 128/8
    IN(i)=hex2dec(plaintext((i-1)*2+1:i*2));
 end
+
 IN = uint8(IN);
+
 IN = reshape(IN,4,4); % 轉換成4x4矩陣
 %
+
 if key_type==128
     Nk = 4;
     Nr = 10;
@@ -45,6 +48,7 @@ key = zeros(1,key_leng/2) ;
 for i=1 : key_leng/2
     key(i)=hex2dec(key_str((i-1)*2+1:i*2)); % 10進轉16
 end
+
 key = uint8(key);
 %
 % key expansion

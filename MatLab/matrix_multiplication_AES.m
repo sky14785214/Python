@@ -11,8 +11,9 @@ for ir = 1:4
             temp_sum = bitxor(temp_sum,temp);
             
         end 
-        C(ir,ic) = temp_sum;
+    C(ir,ic) = temp_sum;
     end
 end
+
 out = C;
 return
