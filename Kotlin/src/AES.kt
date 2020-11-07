@@ -8,18 +8,29 @@ fun main(args: Array<String>){
     val key_type = 256
     var key_str = "603deb1015ca71be2b73aef0857d77811f352c073b6108d72d9810a30914dff4"
     var plaintext_len = if(plaintext.length != null) plaintext.length else -1
+    var a = "b"
+
+
+    fun Strunicode(str: String): String {
+        return String(str.toByteArray())
+    }
+    val b = Strunicode(a)
+    println(b)
+
 
     if (text_mode.equals("Chinese")){  // equals 判斷相同
         print(plaintext_len)
         println("中文")
+
     }
     else if(text_mode == ("English")){
         println(plaintext_len)
         println("英文")
-
-
     }
 }
+
+
+//
 //fun utf8ToUnicodeNoPrefix(str: String) : String {
 //    val builder = StringBuilder()
 //    for (c in str.iterator()) {
@@ -28,3 +39,4 @@ fun main(args: Array<String>){
 //    }
 //    return builder.toString()
 //}
+
