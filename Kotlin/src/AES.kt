@@ -8,35 +8,78 @@ fun main(args: Array<String>){
     val key_type = 256
     var key_str = "603deb1015ca71be2b73aef0857d77811f352c073b6108d72d9810a30914dff4"
     var plaintext_len = if(plaintext.length != null) plaintext.length else -1
-    var a = "b"
 
-
-    fun Strunicode(str: String): String {
-        return String(str.toByteArray())
+    // 字串轉16進字
+    fun stringToHexString(string: String): String {
+        var c = CharArray(string.length)
+        c = string.toCharArray()
+        var hesStr = ""
+        for (i in c.indices) {
+            hesStr = hesStr + Integer.toHexString(c[i].toInt())
+        }
+        return hesStr
     }
-    val b = Strunicode(a)
-    println(b)
+
+//    fun hexStringToString(String string){
+//        var String sub = "";
+//        for (int i = 0; i < string.length() / 2; i++) {
+//        var sub = sub + (char) Integer.valueOf(string.substring(i * 2, i * 2 + 2),16).byteValue();
+//
+//    }
+//        return sub;
+//    }
+
+    var plaintext_hex:String = stringToHexString(plaintext)
+    println(plaintext_hex)
+    val dd = 128/4
+    var phex_leng = plaintext_hex.length
+    println(phex_leng)
+    var q:Int = phex_leng/dd
+    var r:Int = phex_leng%dd
+//    println(q)
+//    println(r)
+    if (r != 0){
+        q = q+1
+        plaintext_hex = plaintext_hex+"8"
+        for ( i in 1..dd-r-1){
+            plaintext_hex = plaintext_hex+ "0"
+        }
+    }
+    // println(plaintext_hex)
+
+    // encryption
+    var ciphertext:String
+    
+//    for( i in q){
+//
+//    }
+
+
+
+
 
 
     if (text_mode.equals("Chinese")){  // equals 判斷相同
-        print(plaintext_len)
-        println("中文")
+        //print(plaintext_len)
+        //println("中文")
+//        for(i in plaintext_len){
+//        }
 
     }
     else if(text_mode == ("English")){
-        println(plaintext_len)
-        println("英文")
+        //println(plaintext_len)
+        //println("英文")
     }
+
 }
-
-
-//
-//fun utf8ToUnicodeNoPrefix(str: String) : String {
-//    val builder = StringBuilder()
-//    for (c in str.iterator()) {
-//        val item = Integer.toHexString(c.toInt())
-//        builder.append(upToNString(item, 4))
-//    }
-//    return builder.toString()
+// 字串轉utf8
+//fun StrtoUtf(a: String)  : Unit{
+//    var charset = Charsets.UTF_8
+//    var test = a
+//    var testhex = test.toByteArray(charset)
+//    println(testhex.contentToString()) // [72, 101, 108, 108, 111]
+//    //println(testhex.toString(charset)) // Hello
 //}
+
+
 

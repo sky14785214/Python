@@ -21,12 +21,14 @@ if strcmp(text_mode,'English') == 1
    plaintext = char();
    for i = 1:plaintext_text_len  %for i in 128/8
        plaintext=strcat(plaintext,hex2dec(double(plaintext_text(i)),2));
+       %fprintf('%s',plaintext)
    end
 elseif strcmp(text_mode,'Chinese') == 1
     plaintext_text_len = length(plaintext_text);
     plaintext = char();
     for i = 1:plaintext_text_len
         plaintext = strcat(plaintext,dec2hex(double(plaintext_text(i)),4));
+        %fprintf('%s\n',plaintext)
     end
 end
 
@@ -47,30 +49,30 @@ end
 
 % encryption
 
-fprintf('\nKey  %s\n',key_str);
+%fprintf('\nKey  %s\n',key_str);
 ciphertext = char();
 for iq = 1:q % q=有幾個區塊
     P = plaintext((iq-1)*dd+1:iq*dd);
     c = AES_E(P,key_type,key_str); % p= 1:32, 33:64...
     % key_type = 256;
     % key_str = '603deb1015ca71be2b73aef0857d77811f352c073b6108d72d9810a30914dff4';
-    fprintf('\nBlock #%d\n',iq);
-    fprintf('\nPlaintext %s\n',P);
-    fprintf('\nCiphertext %s\n',c)
+    %fprintf('\nBlock #%d\n',iq);
+    %fprintf('\nPlaintext %s\n',P);
+    %fprintf('\nCiphertext %s\n',c)
     ciphertext = strcat(ciphertext,c);
 end
 
 
 % decryption
 
-fprintf('\n\n\n');
+%fprintf('\n\n\n');
 R_plaintext = char();
 for iq = 1:q
     C = ciphertext((iq-1)*dd+1:iq*dd);
     P = AES_D(C,key_type,key_str);
-    fprintf('\nBlock #%d\n',iq);
-    fprintf('\nCiphertext %s\n',C);
-    fprintf('\nPlaintext %s\n',P);
+    %fprintf('\nBlock #%d\n',iq);
+    %fprintf('\nCiphertext %s\n',C);
+    %fprintf('\nPlaintext %s\n',P);
     R_plaintext = strcat(R_plaintext,P);
 end
 R_plaintext_leng = length(R_plaintext);
@@ -93,9 +95,9 @@ R_plaintext_text = char(R_plaintext_text);
 
 % prinf data
 
-fprintf('\n')
-fprintf('\nplaintext_text is: %s\n',plaintext_text);
-fprintf('\nplaintext is: %s\n',plaintext);
-fprintf('\nciphertext is: %s\n',ciphertext);
-fprintf('\nR_plaintext is: %s\n',R_plaintext);
-fprintf('\nR_plaintext_text is: %s\n',R_plaintext_text);
+%fprintf('\n')
+%fprintf('\nplaintext_text is: %s\n',plaintext_text);
+%fprintf('\nplaintext is: %s\n',plaintext);
+%fprintf('\nciphertext is: %s\n',ciphertext);
+%fprintf('\nR_plaintext is: %s\n',R_plaintext);
+%fprintf('\nR_plaintext_text is: %s\n',R_plaintext_text);
