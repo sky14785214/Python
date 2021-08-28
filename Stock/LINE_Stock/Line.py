@@ -1,7 +1,9 @@
 
 import twstock
+import requests
 
-def StockFile(path):
+
+def StockFile(path):  #讀取 path.txt 的內容 
     Stock_Name = []
     
     try:
@@ -20,26 +22,22 @@ def StockFile(path):
 # a = StockFile(path)
 # print("取出: ", a)
 
-
-import requests
-def send_fittt(v1):
+def send_fittt(v1): #讀取
     url = (
         "https://maker.ifttt.com/trigger/sky14785214/with/"+
         "key/bT2vBqUupdmzQ6YZakbjOI"+
         "?value1=" + str(v1)
-        # "&valaue2 =" + str(v2) +
-        # "&valaue3 =" + str(v3) 
+
         )
-    
+    # 發送line通知
     r = requests.get(url)
     if r.text[:15] == "Congratulations":
         print(" 已傳送: "+ str(v1) +"到Line")
 
     return r.text
 
-   
-
 ret = send_fittt("台積電")
+
 
 
 
