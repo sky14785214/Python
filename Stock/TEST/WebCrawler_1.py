@@ -2,26 +2,26 @@ import urllib.request as req
 import matplotlib.pyplot as plt
 
 
-def inputstock(url):
-    url="https://histock.tw/stock/financial.aspx?no="+ url +"&t=2"
+# def inputstock(url):
+#     url="https://histock.tw/stock/financial.aspx?no="+ url +"&t=2"
 
 
 
-url="https://histock.tw/stock/financial.aspx?no=2887&t=2"
+# url="https://histock.tw/stock/financial.aspx?no=2887&t=2"
 
-#附加headers 偽裝一般使用者
-request = req.Request(url, headers={
-    "user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
-})
+# #附加headers 偽裝一般使用者
+# request = req.Request(url, headers={
+#     "user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+# })
 
-with req.urlopen(request) as response:
-    data = response.read().decode("utf-8")
-# print(data)
-#解析原始碼
-import bs4
-root = bs4.BeautifulSoup(data,"html.parser")
+# with req.urlopen(request) as response:
+#     data = response.read().decode("utf-8")
+# # print(data)
+# #解析原始碼
+# import bs4
+# root = bs4.BeautifulSoup(data,"html.parser")
 
-EPS_5Y = []
+# EPS_5Y = []
 
 
 def inputstock(url):
