@@ -1,6 +1,7 @@
 
 import twstock
 import requests
+import selenium
 
 
 def StockFile(path):  #讀取 path.txt 的內容 
@@ -35,6 +36,8 @@ def send_fittt(v1): #讀取
         print(" 已傳送: "+ str(v1) +"到Line")
 
     return r.text
+
+
 
 ret = send_fittt("台積電")
 
