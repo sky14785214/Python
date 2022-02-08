@@ -33,16 +33,18 @@ def begin():
     # 走訪網址
     driver.get('https://www.facebook.com/')
 
+
+
 # 登入
-def login():
+def login(Account_number,Secret_code):
     # 輸入帳號
     inputEmail = driver.find_element_by_id('email') 
-    inputEmail.send_keys("a14785214s@yahoo.com.tw")
+    inputEmail.send_keys(Account_number)
 
     # 輸入密碼
     inputPwd = driver.find_element_by_id('pass')
 
-    inputPwd.send_keys("Sky25896325@")
+    inputPwd.send_keys(Secret_code)
 
     # 按下登入/送出鈕
     btnSubmit = driver.find_element_by_css_selector('button[type="submit"][name="login"]')
@@ -181,8 +183,10 @@ def DifferenceListValue(List1,List2): #讀取兩個列表 反傳兩列表不同�
 # 主程式
 if __name__ == '__main__':
     # OpenGoogleDriver()
+    PersonalAccount_code = input("輸入臉書帳號: ")
+    PersonalSecret_code = input("輸入臉書密碼: ")
     begin()
-    login()
+    login(PersonalAccount_code,PersonalSecret_code)
     while True:
         visit()
         scroll()
