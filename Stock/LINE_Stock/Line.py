@@ -24,7 +24,7 @@ def StockFile(path):  #讀取 path.txt 的內容
 
 def send_fittt(v1): #讀取
     url = (
-        "https://maker.ifttt.com/trigger/sky14785214/with/"+
+        "https://maker.ifttt.com/trigger/sky14785214/with/"
         "key/bT2vBqUupdmzQ6YZakbjOI"+
         "?value1=" + str(v1)
 
@@ -36,10 +36,11 @@ def send_fittt(v1): #讀取
 
     return r.text
 
-ret = send_fittt("台積電")
-
-
-
+def WebYahooNewStockPrice(URL): #取得網址中yahoo即時股價
+    ret = send_fittt("台積電")
+a = twstock.realtime.get('2330')
+print(a)
+# b = twstock.realtime.get([])
 
 
 
