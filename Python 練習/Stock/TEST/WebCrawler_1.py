@@ -4,38 +4,31 @@ import matplotlib.pyplot as plt
 
 # def inputstock(url):
 #     url="https://histock.tw/stock/financial.aspx?no="+ url +"&t=2"
+#     return url
 
 
+goodinfo = "https://goodinfo.tw/tw/StockDividendPolicy.asp?STOCK_ID=2887"
 
-# url="https://histock.tw/stock/financial.aspx?no=2887&t=2"
+url="https://histock.tw/stock/financial.aspx?no=2887&t=2"
 
-# #附加headers 偽裝一般使用者
-# request = req.Request(url, headers={
-#     "user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
-# })
+#附加headers 偽裝一般使用者
+request = req.Request(url, headers={
+    "user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+})
 
-# with req.urlopen(request) as response:
-#     data = response.read().decode("utf-8")
-# # print(data)
-# #解析原始碼
-# import bs4
-# root = bs4.BeautifulSoup(data,"html.parser")
+with req.urlopen(request) as response:
+    data = response.read().decode("utf-8")
+# print(data)
+#解析原始碼
+import bs4
+root = bs4.BeautifulSoup(data,"html.parser")
 
-# EPS_5Y = []
-
-
-def inputstock(url):
-    url="https://histock.tw/stock/financial.aspx?no="+ url +"&t=2"
-
-x = [1,2,3,4,5]
-y = [2.3,3.4,1.2,6.6,7.0]
-plt.scatter(x,y,color="r",mark="+")
-plt.show()
-
+EPS_5Y = []
 
 def eps(url_data,eps5y):
     EPS_bf4 = []
     titles = root.find_all("td",class_="b-b") # 尋找所有 class=title 的div標
+    print(titles)
 
     for i in range(2,32,5):
         EPS_bf4.append(titles[i])        
