@@ -15,7 +15,7 @@ with req.urlopen(request) as response:
 
 import bs4
 root=bs4.BeautifulSoup(data,"html.parser")
-# print(root.title.string)#root.title(標籤).string(文字)
+print(root.title.string)#root.title(標籤).string(文字)
 priceData=root.find_all("table")
 # print(priceData.td.string)
-print(priceData)
+# print(priceData)

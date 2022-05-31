@@ -19,7 +19,8 @@ options.add_argument("--incognito")               #開啟無痕模式
 options.add_argument("--disable-popup-blocking ") #禁用彈出攔截
 
 # 使用 Chrome 的 WebDriver
-driver = webdriver.Chrome(executable_path='./CodeCaseCrawler/chromedriver.exe',options = options)
+driver = webdriver.Chrome(executable_path='D:\github\Web_ Crawler\CodeCaseCrawler\chromedriver.exe',options = options)
+# driver = webdriver.Chrome(executable_path='./CodeCaseCrawler/chromedriver.exe',options = options)
 
 
 # 螢幕最大化
@@ -51,11 +52,12 @@ def login(Account_number,Secret_code):
     btnSubmit.click()
     
     # 強制等待
-    sleep(3)
+    sleep(10)
 
 # 走訪個人頁
 def visit():
     driver.get('https://www.facebook.com/groups/2276905072551692')
+    sleep(10)
 
 # 捲動頁面
 def scroll():
@@ -66,7 +68,7 @@ def scroll():
     totalOffset = 0
 
     # 每捲一次，休息幾秒
-    sleepingSecond = 1
+    sleepingSecond = 3
     
     # 在捲動到沒有元素動態產生前，持續捲動
     while totalOffset <= innerHeightOfWindow:
@@ -191,7 +193,6 @@ if __name__ == '__main__':
         visit()
         scroll()
 
-        sleep(30)
         
         NewPosytemp = parse() #解析網頁資料
         NewPosy= GetJson_1to3(1,4,1,NewPosytemp) # 取出最新3篇文章
@@ -200,7 +201,7 @@ if __name__ == '__main__':
         #----- 取出舊資料
         OldPost = []    
         # FBJsonPath= "F:\GitHub\CodeCaseCrawler\FB.json"
-        FBdata= OpenJson("F:\GitHub\CodeCaseCrawler\FB.json")  
+        FBdata= OpenJson("D:\github\Web_ Crawler\CodeCaseCrawler\FB.json")  
         OldPost = GetJson_1to3(1,4,1,FBdata)
         #------
 
@@ -208,11 +209,11 @@ if __name__ == '__main__':
         sendmessage = DifferenceListValue(NewPosy,OldPost)
         if len(sendmessage) != 0:
             send_fittt(str(sendmessage))
-        #--------
-        print(NewPosy)
+            #--------
+            print(NewPosy)
 
         # 處存貼文 做舊資料
-        fp = open("F:\GitHub\CodeCaseCrawler\FB.json", "w",encoding='UTF-8')
+        fp = open("D:\github\Web_ Crawler\CodeCaseCrawler\FB.json", "w",encoding='UTF-8')
         fp.write( json.dumps(NewPosytemp, ensure_ascii=False) )
         fp.close()
 
